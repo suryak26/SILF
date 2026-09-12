@@ -1,0 +1,14 @@
+{
+    "DESIGN_NAME": "lut_gen_unit",
+    "VERILOG_FILES": [
+        "dir::src/lut_gen_unit.v",
+        "dir::src/mega_multiplier.v",
+        "dir::src/mega_adder.v"
+    ],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 20.0,
+    "SYNTH_STRATEGY": "AREA 0",
+    "PL_TARGET_DENSITY": 0.45,
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 950 950"
+}

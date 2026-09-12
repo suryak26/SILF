@@ -1,0 +1,45 @@
+# EDA flow outputs
+runs/
+sim_out/
+openlane_runs/
+orfs_build/
+.openlane/
+build/
+
+# Simulation waveforms and generated files
+*.vcd
+*.fst
+*.lxt
+*.wlf
+*.vvp
+
+# Generated ASIC files
+*.gds
+*.oas
+*.lef
+*.def
+*.odb
+*.spef
+*.sdf
+*.sp
+*.spice
+*.cdl
+
+# Generated logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Editors and OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
