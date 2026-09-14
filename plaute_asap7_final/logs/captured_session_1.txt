@@ -1,0 +1,783 @@
+surya@victus-gaming:~$ cd ~
+git clone --recursive https://github.com/The-OpenROAD-Project/OpenROAD-flow-scripts.git
+cd OpenROAD-flow-scripts
+
+ls
+ls flow/platforms/asap7
+Cloning into 'OpenROAD-flow-scripts'...
+remote: Enumerating objects: 87644, done.
+remote: Counting objects: 100% (2182/2182), done.
+remote: Compressing objects: 100% (554/554), done.
+remote: Total 87644 (delta 1940), reused 1628 (delta 1628), pack-reused 85462 (from 3)
+Receiving objects: 100% (87644/87644), 880.84 MiB | 5.79 MiB/s, done.
+Resolving deltas: 100% (65924/65924), done.
+Updating files: 100% (2619/2619), done.
+Submodule 'tools/OpenROAD' (https://github.com/The-OpenROAD-Project/OpenROAD.git) registered for path 'tools/OpenROAD'
+Submodule 'tools/kepler-formal' (https://github.com/keplertech/kepler-formal) registered for path 'tools/kepler-formal'
+Submodule 'tools/yosys' (https://github.com/The-OpenROAD-Project/yosys.git) registered for path 'tools/yosys'
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/OpenROAD'...
+remote: Enumerating objects: 389961, done.        
+remote: Counting objects: 100% (3708/3708), done.        
+remote: Compressing objects: 100% (810/810), done.        
+remote: Total 389961 (delta 3046), reused 2901 (delta 2898), pack-reused 386253 (from 3)        
+Receiving objects: 100% (389961/389961), 989.05 MiB | 7.16 MiB/s, done.
+Resolving deltas: 100% (299355/299355), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/kepler-formal'...
+remote: Enumerating objects: 10470, done.        
+remote: Counting objects: 100% (1864/1864), done.        
+remote: Compressing objects: 100% (642/642), done.        
+remote: Total 10470 (delta 1464), reused 1358 (delta 1216), pack-reused 8606 (from 3)        
+Receiving objects: 100% (10470/10470), 26.49 MiB | 4.93 MiB/s, done.
+Resolving deltas: 100% (7166/7166), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/yosys'...
+remote: Enumerating objects: 105753, done.        
+remote: Counting objects: 100% (86/86), done.        
+remote: Compressing objects: 100% (57/57), done.        
+remote: Total 105753 (delta 58), reused 29 (delta 29), pack-reused 105667 (from 2)        
+Receiving objects: 100% (105753/105753), 35.36 MiB | 6.82 MiB/s, done.
+Resolving deltas: 100% (78642/78642), done.
+Submodule path 'tools/OpenROAD': checked out '41a28926b92c5c20f41f89e90222a95a820384d2'
+Submodule 'module/OpenSTA' (https://github.com/The-OpenROAD-Project/OpenSTA.git) registered for path 'tools/OpenROAD/src/sta'
+Submodule 'src/abc' (https://github.com/The-OpenROAD-Project/abc.git) registered for path 'tools/OpenROAD/third-party/abc'
+Submodule 'third-party/slang-elab' (https://github.com/povik/yosys-slang.git) registered for path 'tools/OpenROAD/third-party/slang-elab'
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/OpenROAD/src/sta'...
+remote: Enumerating objects: 29446, done.        
+remote: Counting objects: 100% (3681/3681), done.        
+remote: Compressing objects: 100% (292/292), done.        
+remote: Total 29446 (delta 3523), reused 3389 (delta 3389), pack-reused 25765 (from 2)        
+Receiving objects: 100% (29446/29446), 130.23 MiB | 5.98 MiB/s, done.
+Resolving deltas: 100% (23291/23291), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc'...
+remote: Enumerating objects: 71062, done.        
+remote: Counting objects: 100% (17/17), done.        
+remote: Compressing objects: 100% (5/5), done.        
+remote: Total 71062 (delta 12), reused 12 (delta 12), pack-reused 71045 (from 3)        
+Receiving objects: 100% (71062/71062), 67.15 MiB | 4.97 MiB/s, done.
+Resolving deltas: 100% (60140/60140), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/OpenROAD/third-party/slang-elab'...
+remote: Enumerating objects: 4245, done.        
+remote: Counting objects: 100% (2349/2349), done.        
+remote: Compressing objects: 100% (383/383), done.        
+remote: Total 4245 (delta 2219), reused 1973 (delta 1966), pack-reused 1896 (from 1)        
+Receiving objects: 100% (4245/4245), 999.44 KiB | 6.45 MiB/s, done.
+Resolving deltas: 100% (3016/3016), done.
+Submodule path 'tools/OpenROAD/src/sta': checked out '779d47250b65b121ad22c70eb42e242292f9babf'
+Submodule path 'tools/OpenROAD/third-party/abc': checked out 'd527cfab4ad731b767ea0a2be2021d920d3afece'
+Submodule path 'tools/OpenROAD/third-party/slang-elab': checked out '82effc8d9541be69e1ed3ec44759a4449f5d9247'
+Submodule 'third_party/fmt' (https://github.com/fmtlib/fmt) registered for path 'tools/OpenROAD/third-party/slang-elab/third_party/fmt'
+Submodule 'third_party/slang' (https://github.com/MikePopoloski/slang.git) registered for path 'tools/OpenROAD/third-party/slang-elab/third_party/slang'
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/OpenROAD/third-party/slang-elab/third_party/fmt'...
+remote: Enumerating objects: 42320, done.        
+remote: Counting objects: 100% (241/241), done.        
+remote: Compressing objects: 100% (82/82), done.        
+remote: Total 42320 (delta 176), reused 156 (delta 152), pack-reused 42079 (from 4)        
+Receiving objects: 100% (42320/42320), 17.34 MiB | 5.32 MiB/s, done.
+Resolving deltas: 100% (28512/28512), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/OpenROAD/third-party/slang-elab/third_party/slang'...
+remote: Enumerating objects: 72155, done.        
+remote: Counting objects: 100% (186/186), done.        
+remote: Compressing objects: 100% (80/80), done.        
+remote: Total 72155 (delta 134), reused 106 (delta 106), pack-reused 71969 (from 2)        
+Receiving objects: 100% (72155/72155), 34.60 MiB | 7.91 MiB/s, done.
+Resolving deltas: 100% (56981/56981), done.
+Submodule path 'tools/OpenROAD/third-party/slang-elab/third_party/fmt': checked out '553ec11ec06fbe0beebfbb45f9dc3c9eabd83d28'
+Submodule path 'tools/OpenROAD/third-party/slang-elab/third_party/slang': checked out 'f04e81565793c768b747a8fd058f3e7aeceee1b5'
+Submodule path 'tools/kepler-formal': checked out 'f5199717d6d66256cfd25edf50149950d5f3f59c'
+Submodule 'thirdparty/cadical' (https://github.com/arminbiere/cadical) registered for path 'tools/kepler-formal/thirdparty/cadical'
+Submodule 'thirdparty/glucose' (https://github.com/audemard/glucose.git) registered for path 'tools/kepler-formal/thirdparty/glucose'
+Submodule 'thirdparty/kissat' (https://github.com/arminbiere/kissat) registered for path 'tools/kepler-formal/thirdparty/kissat'
+Submodule 'thirdparty/naja' (https://github.com/nanocoh/naja.git) registered for path 'tools/kepler-formal/thirdparty/naja'
+Submodule 'thirdparty/yaml-cpp' (https://github.com/jbeder/yaml-cpp.git) registered for path 'tools/kepler-formal/thirdparty/yaml-cpp'
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/kepler-formal/thirdparty/cadical'...
+remote: Enumerating objects: 28242, done.        
+remote: Counting objects: 100% (1877/1877), done.        
+remote: Compressing objects: 100% (248/248), done.        
+remote: Total 28242 (delta 1787), reused 1647 (delta 1629), pack-reused 26365 (from 4)        
+Receiving objects: 100% (28242/28242), 9.95 MiB | 4.85 MiB/s, done.
+Resolving deltas: 100% (21407/21407), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/kepler-formal/thirdparty/glucose'...
+remote: Enumerating objects: 326, done.        
+remote: Counting objects: 100% (86/86), done.        
+remote: Compressing objects: 100% (35/35), done.        
+remote: Total 326 (delta 66), reused 56 (delta 51), pack-reused 240 (from 1)        
+Receiving objects: 100% (326/326), 352.73 KiB | 2.75 MiB/s, done.
+Resolving deltas: 100% (157/157), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/kepler-formal/thirdparty/kissat'...
+remote: Enumerating objects: 1563, done.        
+remote: Counting objects: 100% (382/382), done.        
+remote: Compressing objects: 100% (193/193), done.        
+remote: Total 1563 (delta 275), reused 189 (delta 189), pack-reused 1181 (from 2)        
+Receiving objects: 100% (1563/1563), 1.11 MiB | 6.90 MiB/s, done.
+Resolving deltas: 100% (806/806), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/kepler-formal/thirdparty/naja'...
+remote: Enumerating objects: 24937, done.        
+remote: Counting objects: 100% (4222/4222), done.        
+remote: Compressing objects: 100% (1546/1546), done.        
+remote: Total 24937 (delta 3495), reused 2706 (delta 2676), pack-reused 20715 (from 1)        
+Receiving objects: 100% (24937/24937), 21.13 MiB | 2.98 MiB/s, done.
+Resolving deltas: 100% (17371/17371), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/kepler-formal/thirdparty/yaml-cpp'...
+remote: Enumerating objects: 10086, done.        
+remote: Counting objects: 100% (420/420), done.        
+remote: Compressing objects: 100% (225/225), done.        
+remote: Total 10086 (delta 322), reused 195 (delta 195), pack-reused 9666 (from 2)        
+Receiving objects: 100% (10086/10086), 5.67 MiB | 3.27 MiB/s, done.
+Resolving deltas: 100% (6601/6601), done.
+Submodule path 'tools/kepler-formal/thirdparty/cadical': checked out '7b99c07f0bcab5824a5a3ce62c7066554017f641'
+Submodule path 'tools/kepler-formal/thirdparty/glucose': checked out '7f887abba7cf13636a5ac2d28653668a20a91b25'
+Submodule path 'tools/kepler-formal/thirdparty/kissat': checked out '8af8e56f174b778aef3aa45af9f739b2a5f492c2'
+Submodule path 'tools/kepler-formal/thirdparty/naja': checked out '429dfe03fee45a40d782da00c5f2654df68c707e'
+Submodule 'thirdparty/cpptrace' (https://github.com/jeremy-rifkin/cpptrace) registered for path 'tools/kepler-formal/thirdparty/naja/thirdparty/cpptrace'
+Submodule 'test/googletest' (https://github.com/google/googletest) registered for path 'tools/kepler-formal/thirdparty/naja/thirdparty/googletest'
+Submodule 'thirdparty/naja-if' (https://github.com/najaeda/naja-if) registered for path 'tools/kepler-formal/thirdparty/naja/thirdparty/naja-if'
+Submodule 'thirdparty/naja-verilog' (https://github.com/najaeda/naja-verilog) registered for path 'tools/kepler-formal/thirdparty/naja/thirdparty/naja-verilog'
+Submodule 'thirdparty/slang' (https://github.com/najaeda/slang) registered for path 'tools/kepler-formal/thirdparty/naja/thirdparty/slang'
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/kepler-formal/thirdparty/naja/thirdparty/cpptrace'...
+remote: Enumerating objects: 7881, done.        
+remote: Counting objects: 100% (1542/1542), done.        
+remote: Compressing objects: 100% (332/332), done.        
+remote: Total 7881 (delta 1402), reused 1210 (delta 1210), pack-reused 6339 (from 3)        
+Receiving objects: 100% (7881/7881), 3.56 MiB | 8.56 MiB/s, done.
+Resolving deltas: 100% (5343/5343), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/kepler-formal/thirdparty/naja/thirdparty/googletest'...
+remote: Enumerating objects: 29423, done.        
+remote: Counting objects: 100% (559/559), done.        
+remote: Compressing objects: 100% (388/388), done.        
+remote: Total 29423 (delta 400), reused 172 (delta 170), pack-reused 28864 (from 3)        
+Receiving objects: 100% (29423/29423), 14.20 MiB | 4.04 MiB/s, done.
+Resolving deltas: 100% (21810/21810), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/kepler-formal/thirdparty/naja/thirdparty/naja-if'...
+remote: Enumerating objects: 164, done.        
+remote: Counting objects: 100% (164/164), done.        
+remote: Compressing objects: 100% (110/110), done.        
+remote: Total 164 (delta 64), reused 110 (delta 29), pack-reused 0 (from 0)        
+Receiving objects: 100% (164/164), 46.09 KiB | 2.09 MiB/s, done.
+Resolving deltas: 100% (64/64), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/kepler-formal/thirdparty/naja/thirdparty/naja-verilog'...
+remote: Enumerating objects: 1247, done.        
+remote: Counting objects: 100% (384/384), done.        
+remote: Compressing objects: 100% (49/49), done.        
+remote: Total 1247 (delta 349), reused 336 (delta 335), pack-reused 863 (from 1)        
+Receiving objects: 100% (1247/1247), 257.94 KiB | 3.97 MiB/s, done.
+Resolving deltas: 100% (825/825), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/kepler-formal/thirdparty/naja/thirdparty/slang'...
+remote: Enumerating objects: 70788, done.        
+remote: Total 70788 (delta 0), reused 0 (delta 0), pack-reused 70788 (from 1)        
+Receiving objects: 100% (70788/70788), 33.82 MiB | 4.64 MiB/s, done.
+Resolving deltas: 100% (56053/56053), done.
+Submodule path 'tools/kepler-formal/thirdparty/naja/thirdparty/cpptrace': checked out '3db8da80111171c219ab5839905771386bee06b3'
+Submodule path 'tools/kepler-formal/thirdparty/naja/thirdparty/googletest': checked out '52eb8108c5bdec04579160ae17225d66034bd723'
+Submodule path 'tools/kepler-formal/thirdparty/naja/thirdparty/naja-if': checked out '318b8faa01aedd990058854b4de4ee2d779d8237'
+Submodule path 'tools/kepler-formal/thirdparty/naja/thirdparty/naja-verilog': checked out '5da040bb34f0e4e5bb8d67223b999a0132fb401f'
+Submodule 'thirdparty/googletest' (https://github.com/google/googletest) registered for path 'tools/kepler-formal/thirdparty/naja/thirdparty/naja-verilog/thirdparty/googletest'
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/kepler-formal/thirdparty/naja/thirdparty/naja-verilog/thirdparty/googletest'...
+remote: Enumerating objects: 29423, done.        
+remote: Counting objects: 100% (560/560), done.        
+remote: Compressing objects: 100% (391/391), done.        
+remote: Total 29423 (delta 401), reused 170 (delta 168), pack-reused 28863 (from 3)        
+Receiving objects: 100% (29423/29423), 14.20 MiB | 4.62 MiB/s, done.
+Resolving deltas: 100% (21810/21810), done.
+Submodule path 'tools/kepler-formal/thirdparty/naja/thirdparty/naja-verilog/thirdparty/googletest': checked out '52eb8108c5bdec04579160ae17225d66034bd723'
+Submodule path 'tools/kepler-formal/thirdparty/naja/thirdparty/slang': checked out '512c327c209d3043aa98ecfd02d06a1b73fcd5fb'
+Submodule path 'tools/kepler-formal/thirdparty/yaml-cpp': checked out 'a83cd31548b19d50f3f983b069dceb4f4d50756d'
+Submodule path 'tools/yosys': checked out 'a5af9d690a43744bf6b2cc3dea2717c16b54621c'
+Submodule 'abc' (https://github.com/YosysHQ/abc) registered for path 'tools/yosys/abc'
+Submodule 'sv-elab' (https://github.com/povik/sv-elab) registered for path 'tools/yosys/frontends/slang/lib'
+Submodule 'boost_regex' (https://github.com/MikePopoloski/regex) registered for path 'tools/yosys/libs/boost_regex'
+Submodule 'cxxopts' (https://github.com/jarro2783/cxxopts) registered for path 'tools/yosys/libs/cxxopts'
+Submodule 'fmt' (https://github.com/fmtlib/fmt) registered for path 'tools/yosys/libs/fmt'
+Submodule 'slang' (https://github.com/MikePopoloski/slang) registered for path 'tools/yosys/libs/slang'
+Submodule 'symfpu' (https://github.com/YosysHQ/symfpu) registered for path 'tools/yosys/libs/symfpu'
+Submodule 'tomlplusplus' (https://github.com/marzer/tomlplusplus) registered for path 'tools/yosys/libs/tomlplusplus'
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/yosys/abc'...
+remote: Enumerating objects: 72958, done.        
+remote: Counting objects: 100% (511/511), done.        
+remote: Compressing objects: 100% (271/271), done.        
+remote: Total 72958 (delta 345), reused 283 (delta 240), pack-reused 72447 (from 3)        
+Receiving objects: 100% (72958/72958), 71.74 MiB | 7.11 MiB/s, done.
+Resolving deltas: 100% (61335/61335), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/yosys/frontends/slang/lib'...
+remote: Enumerating objects: 4245, done.        
+remote: Counting objects: 100% (2349/2349), done.        
+remote: Compressing objects: 100% (383/383), done.        
+remote: Total 4245 (delta 2219), reused 1973 (delta 1966), pack-reused 1896 (from 1)        
+Receiving objects: 100% (4245/4245), 999.44 KiB | 7.35 MiB/s, done.
+Resolving deltas: 100% (3016/3016), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/yosys/libs/boost_regex'...
+remote: Enumerating objects: 21735, done.        
+remote: Counting objects: 100% (316/316), done.        
+remote: Compressing objects: 100% (169/169), done.        
+remote: Total 21735 (delta 189), reused 153 (delta 143), pack-reused 21419 (from 3)        
+Receiving objects: 100% (21735/21735), 12.44 MiB | 3.60 MiB/s, done.
+Resolving deltas: 100% (13473/13473), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/yosys/libs/cxxopts'...
+remote: Enumerating objects: 2037, done.        
+remote: Counting objects: 100% (734/734), done.        
+remote: Compressing objects: 100% (126/126), done.        
+remote: Total 2037 (delta 681), reused 609 (delta 608), pack-reused 1303 (from 2)        
+Receiving objects: 100% (2037/2037), 773.75 KiB | 5.34 MiB/s, done.
+Resolving deltas: 100% (1208/1208), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/yosys/libs/fmt'...
+remote: Enumerating objects: 42320, done.        
+remote: Counting objects: 100% (198/198), done.        
+remote: Compressing objects: 100% (96/96), done.        
+remote: Total 42320 (delta 126), reused 99 (delta 95), pack-reused 42122 (from 4)        
+Receiving objects: 100% (42320/42320), 17.36 MiB | 7.16 MiB/s, done.
+Resolving deltas: 100% (28509/28509), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/yosys/libs/slang'...
+remote: Enumerating objects: 72155, done.        
+remote: Counting objects: 100% (186/186), done.        
+remote: Compressing objects: 100% (80/80), done.        
+remote: Total 72155 (delta 134), reused 106 (delta 106), pack-reused 71969 (from 2)        
+Receiving objects: 100% (72155/72155), 34.60 MiB | 7.80 MiB/s, done.
+Resolving deltas: 100% (56981/56981), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/yosys/libs/symfpu'...
+remote: Enumerating objects: 435, done.        
+remote: Counting objects: 100% (159/159), done.        
+remote: Compressing objects: 100% (30/30), done.        
+remote: Total 435 (delta 143), reused 129 (delta 129), pack-reused 276 (from 1)        
+Receiving objects: 100% (435/435), 197.07 KiB | 313.00 KiB/s, done.
+Resolving deltas: 100% (305/305), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/yosys/libs/tomlplusplus'...
+remote: Enumerating objects: 13622, done.        
+remote: Counting objects: 100% (2802/2802), done.        
+remote: Compressing objects: 100% (354/354), done.        
+remote: Total 13622 (delta 2723), reused 2448 (delta 2448), pack-reused 10820 (from 2)        
+Receiving objects: 100% (13622/13622), 26.46 MiB | 6.90 MiB/s, done.
+Resolving deltas: 100% (11268/11268), done.
+Submodule path 'tools/yosys/abc': checked out '2a9e9c2a00e44abd90fc593edfc2c0ff4573f318'
+Submodule path 'tools/yosys/frontends/slang/lib': checked out '3dddccd478618d68f8a5e160fb4b5783c4da35d4'
+Submodule 'third_party/fmt' (https://github.com/fmtlib/fmt) registered for path 'tools/yosys/frontends/slang/lib/third_party/fmt'
+Submodule 'third_party/slang' (https://github.com/MikePopoloski/slang.git) registered for path 'tools/yosys/frontends/slang/lib/third_party/slang'
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/yosys/frontends/slang/lib/third_party/fmt'...
+remote: Enumerating objects: 42320, done.        
+remote: Counting objects: 100% (241/241), done.        
+remote: Compressing objects: 100% (82/82), done.        
+remote: Total 42320 (delta 176), reused 156 (delta 152), pack-reused 42079 (from 4)        
+Receiving objects: 100% (42320/42320), 17.34 MiB | 8.13 MiB/s, done.
+Resolving deltas: 100% (28512/28512), done.
+Cloning into '/home/surya/OpenROAD-flow-scripts/tools/yosys/frontends/slang/lib/third_party/slang'...
+remote: Enumerating objects: 72155, done.        
+remote: Counting objects: 100% (186/186), done.        
+remote: Compressing objects: 100% (80/80), done.        
+remote: Total 72155 (delta 134), reused 106 (delta 106), pack-reused 71969 (from 2)        
+Receiving objects: 100% (72155/72155), 34.60 MiB | 4.39 MiB/s, done.
+Resolving deltas: 100% (56981/56981), done.
+Submodule path 'tools/yosys/frontends/slang/lib/third_party/fmt': checked out '1be298e1bd68957e4cd352e1f676f00e07dcfb57'
+Submodule path 'tools/yosys/frontends/slang/lib/third_party/slang': checked out '8acc660a20b70de48ecec1c7471863e6f4b3ae6f'
+Submodule path 'tools/yosys/libs/boost_regex': checked out '2b3ac0834f31086c6e3c0e0ceb8516e427d5c39d'
+Submodule path 'tools/yosys/libs/cxxopts': checked out '4bf61f08697b110d9e3991864650a405b3dd515d'
+Submodule path 'tools/yosys/libs/fmt': checked out 'a00f82c6b66dcae15503ba19c1598b2733057dea'
+Submodule path 'tools/yosys/libs/slang': checked out '8acc660a20b70de48ecec1c7471863e6f4b3ae6f'
+Submodule path 'tools/yosys/libs/symfpu': checked out '5d5e50867437fe5cabd6ab5aad3b3808ec86701f'
+Submodule path 'tools/yosys/libs/tomlplusplus': checked out 'a43ad3787293f4a46b1d70c0924b5a25d10e79fc'
+AGENTS.md          docker      flake.nix                  README.md
+bazel              Dockerfile  flow                       setup.sh
+build_openroad.sh  docs        jenkins                    tclint.toml
+CLAUDE.md          env.sh      Jenkinsfile                tools
+claude.sh          etc         LICENSE_BUILD_RUN_SCRIPTS  yamlfix.toml
+dev_env.sh         flake.lock  patches
+config.mk        gds                       openlane            setRC.tcl
+constraints.sdc  KLayout                   openRoad            verilog
+drc              lef                       ram                 yoSys
+fakeram.cfg      lib                       rcx_patterns.rules
+fastroute.tcl    liberty_suppressions.tcl  README.md
+surya@victus-gaming:~/OpenROAD-flow-scripts$ sudo ./setup.sh
+[sudo] password for surya: 
+[INFO] Install ubuntu base packages using apt (-base or -all)
+[INFO] Updating package lists... ✔
+[INFO] Installing base packages... ✔
+[INFO] Installing version-specific packages... ✔
+[INFO] Cleaning up packages... ✔
+[INFO] Removing unused packages... ✔
+Hit:1 https://dl.google.com/linux/chrome-stable/deb stable InRelease
+Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease               
+Hit:3 http://lk.archive.ubuntu.com/ubuntu jammy InRelease                      
+Hit:4 http://packages.ros.org/ros2/ubuntu jammy InRelease           
+Hit:5 http://lk.archive.ubuntu.com/ubuntu jammy-updates InRelease   
+Hit:6 http://lk.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:7 https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev antigravity-debian InRelease
+Reading package lists... Done
+N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev antigravity-debian InRelease' doesn't support architecture 'i386'
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Note, selecting 'zlib1g-dev' instead of 'libz-dev'
+bison is already the newest version (2:3.8.2+dfsg-1build1).
+flex is already the newest version (2.6.4-8build2).
+libfl-dev is already the newest version (2.6.4-8build2).
+libfl2 is already the newest version (2.6.4-8build2).
+libfl2 set to manually installed.
+libreadline-dev is already the newest version (8.1.2-1).
+pkg-config is already the newest version (0.29.2-1ubuntu3).
+ruby is already the newest version (1:3.0~exp1).
+ruby set to manually installed.
+time is already the newest version (1.9-0.1build2).
+time set to manually installed.
+libboost-iostreams-dev is already the newest version (1.74.0.3ubuntu7).
+libboost-iostreams-dev set to manually installed.
+libgtest-dev is already the newest version (1.11.0-3).
+libgtest-dev set to manually installed.
+libtbb-dev is already the newest version (2021.5.0-7ubuntu2).
+libtbb-dev set to manually installed.
+qttools5-dev is already the newest version (5.15.3-1).
+qttools5-dev set to manually installed.
+curl is already the newest version (7.81.0-1ubuntu1.27).
+perl is already the newest version (5.34.0-3ubuntu1.9).
+perl set to manually installed.
+zlib1g is already the newest version (1:1.2.11.dfsg-2ubuntu9.2).
+zlib1g set to manually installed.
+zlib1g-dev is already the newest version (1:1.2.11.dfsg-2ubuntu9.2).
+libqt5opengl5 is already the newest version (5.15.3+dfsg-2ubuntu0.2).
+libqt5opengl5 set to manually installed.
+python3-pip is already the newest version (22.0.2+dfsg-1ubuntu0.7).
+python3-venv is already the newest version (3.10.6-1~22.04.1).
+Suggested packages:
+  gmp-doc libgmp10-doc libmpfr-dev libmbedtls-doc
+Recommended packages:
+  ruby3.0-doc
+The following NEW packages will be installed:
+  capnproto help2man libcapnp-0.8.0 libcapnp-dev libgit2-1.1 libgit2-dev
+  libgmp-dev libgmpxx4ldbl libgoogle-perftools-dev libgoogle-perftools4
+  libhttp-parser-dev libhttp-parser2.9 libmbedcrypto7 libmbedtls-dev
+  libmbedtls14 libmbedx509-1 libqt5multimedia5 libqt5multimediagsttools5
+  libqt5multimediaquick5 libqt5multimediawidgets5 libqt5svg5-dev
+  libqt5xmlpatterns5 libqt5xmlpatterns5-dev libssh2-1 libssh2-1-dev
+  libtcmalloc-minimal4 qtmultimedia5-dev ruby-dev ruby3.0-dev tcl-tclreadline
+0 upgraded, 30 newly installed, 0 to remove and 0 not upgraded.
+Need to get 8,862 kB of archives.
+After this operation, 44.2 MB of additional disk space will be used.
+Get:1 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libqt5svg5-dev amd64 5.15.3-1 [11.1 kB]
+Get:2 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libcapnp-0.8.0 amd64 0.8.0-2ubuntu2 [1,157 kB]
+Get:3 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 capnproto amd64 0.8.0-2ubuntu2 [244 kB]
+Get:4 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 help2man amd64 1.49.1 [186 kB]
+Get:5 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libcapnp-dev amd64 0.8.0-2ubuntu2 [1,781 kB]
+Get:6 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libhttp-parser2.9 amd64 2.9.4-4 [21.5 kB]
+Get:7 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libmbedcrypto7 amd64 2.28.0-1build1 [204 kB]
+Get:8 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libmbedx509-1 amd64 2.28.0-1build1 [47.2 kB]
+Get:9 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libmbedtls14 amd64 2.28.0-1build1 [82.7 kB]
+Get:10 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libssh2-1 amd64 1.10.0-3 [109 kB]
+Get:11 http://lk.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libgit2-1.1 amd64 1.1.0+dfsg.1-4.1ubuntu0.1 [457 kB]
+Get:12 http://lk.archive.ubuntu.com/ubuntu jammy/main amd64 libgmpxx4ldbl amd64 2:6.2.1+dfsg-3ubuntu1 [9,580 B]
+Get:13 http://lk.archive.ubuntu.com/ubuntu jammy/main amd64 libgmp-dev amd64 2:6.2.1+dfsg-3ubuntu1 [337 kB]
+Get:14 http://lk.archive.ubuntu.com/ubuntu jammy/main amd64 libtcmalloc-minimal4 amd64 2.9.1-0ubuntu3 [98.2 kB]
+Get:15 http://lk.archive.ubuntu.com/ubuntu jammy/main amd64 libgoogle-perftools4 amd64 2.9.1-0ubuntu3 [212 kB]
+Get:16 http://lk.archive.ubuntu.com/ubuntu jammy/main amd64 libgoogle-perftools-dev amd64 2.9.1-0ubuntu3 [470 kB]
+Get:17 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libmbedtls-dev amd64 2.28.0-1build1 [629 kB]
+Get:18 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libqt5multimedia5 amd64 5.15.3-1 [320 kB]
+Get:19 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libqt5multimediawidgets5 amd64 5.15.3-1 [42.6 kB]
+Get:20 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libqt5multimediagsttools5 amd64 5.15.3-1 [112 kB]
+Get:21 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libqt5multimediaquick5 amd64 5.15.3-1 [45.5 kB]
+Get:22 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libqt5xmlpatterns5 amd64 5.15.3-1 [901 kB]
+Get:23 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libqt5xmlpatterns5-dev amd64 5.15.3-1 [16.5 kB]
+Get:24 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libssh2-1-dev amd64 1.10.0-3 [243 kB]
+Get:25 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 qtmultimedia5-dev amd64 5.15.3-1 [45.1 kB]
+Get:26 http://lk.archive.ubuntu.com/ubuntu jammy-updates/main amd64 ruby3.0-dev amd64 3.0.2-7ubuntu2.13 [242 kB]
+Get:27 http://lk.archive.ubuntu.com/ubuntu jammy/main amd64 ruby-dev amd64 1:3.0~exp1 [4,328 B]
+Get:28 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 tcl-tclreadline amd64 2.3.8-1 [50.8 kB]
+Get:29 http://lk.archive.ubuntu.com/ubuntu jammy/universe amd64 libhttp-parser-dev amd64 2.9.4-4 [20.4 kB]
+Get:30 http://lk.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libgit2-dev amd64 1.1.0+dfsg.1-4.1ubuntu0.1 [764 kB]
+Fetched 8,862 kB in 6s (1,448 kB/s)                                            
+Selecting previously unselected package libqt5svg5-dev:amd64.
+(Reading database ... 356346 files and directories currently installed.)
+Preparing to unpack .../00-libqt5svg5-dev_5.15.3-1_amd64.deb ...
+Unpacking libqt5svg5-dev:amd64 (5.15.3-1) ...
+Selecting previously unselected package libcapnp-0.8.0:amd64.
+Preparing to unpack .../01-libcapnp-0.8.0_0.8.0-2ubuntu2_amd64.deb ...
+Unpacking libcapnp-0.8.0:amd64 (0.8.0-2ubuntu2) ...
+Selecting previously unselected package capnproto.
+Preparing to unpack .../02-capnproto_0.8.0-2ubuntu2_amd64.deb ...
+Unpacking capnproto (0.8.0-2ubuntu2) ...
+Selecting previously unselected package help2man.
+Preparing to unpack .../03-help2man_1.49.1_amd64.deb ...
+Unpacking help2man (1.49.1) ...
+Selecting previously unselected package libcapnp-dev:amd64.
+Preparing to unpack .../04-libcapnp-dev_0.8.0-2ubuntu2_amd64.deb ...
+Unpacking libcapnp-dev:amd64 (0.8.0-2ubuntu2) ...
+Selecting previously unselected package libhttp-parser2.9:amd64.
+Preparing to unpack .../05-libhttp-parser2.9_2.9.4-4_amd64.deb ...
+Unpacking libhttp-parser2.9:amd64 (2.9.4-4) ...
+Selecting previously unselected package libmbedcrypto7:amd64.
+Preparing to unpack .../06-libmbedcrypto7_2.28.0-1build1_amd64.deb ...
+Unpacking libmbedcrypto7:amd64 (2.28.0-1build1) ...
+Selecting previously unselected package libmbedx509-1:amd64.
+Preparing to unpack .../07-libmbedx509-1_2.28.0-1build1_amd64.deb ...
+Unpacking libmbedx509-1:amd64 (2.28.0-1build1) ...
+Selecting previously unselected package libmbedtls14:amd64.
+Preparing to unpack .../08-libmbedtls14_2.28.0-1build1_amd64.deb ...
+Unpacking libmbedtls14:amd64 (2.28.0-1build1) ...
+Selecting previously unselected package libssh2-1:amd64.
+Preparing to unpack .../09-libssh2-1_1.10.0-3_amd64.deb ...
+Unpacking libssh2-1:amd64 (1.10.0-3) ...
+Selecting previously unselected package libgit2-1.1:amd64.
+Preparing to unpack .../10-libgit2-1.1_1.1.0+dfsg.1-4.1ubuntu0.1_amd64.deb ...
+Unpacking libgit2-1.1:amd64 (1.1.0+dfsg.1-4.1ubuntu0.1) ...
+Selecting previously unselected package libgmpxx4ldbl:amd64.
+Preparing to unpack .../11-libgmpxx4ldbl_2%3a6.2.1+dfsg-3ubuntu1_amd64.deb ...
+Unpacking libgmpxx4ldbl:amd64 (2:6.2.1+dfsg-3ubuntu1) ...
+Selecting previously unselected package libgmp-dev:amd64.
+Preparing to unpack .../12-libgmp-dev_2%3a6.2.1+dfsg-3ubuntu1_amd64.deb ...
+Unpacking libgmp-dev:amd64 (2:6.2.1+dfsg-3ubuntu1) ...
+Selecting previously unselected package libtcmalloc-minimal4:amd64.
+Preparing to unpack .../13-libtcmalloc-minimal4_2.9.1-0ubuntu3_amd64.deb ...
+Unpacking libtcmalloc-minimal4:amd64 (2.9.1-0ubuntu3) ...
+Selecting previously unselected package libgoogle-perftools4:amd64.
+Preparing to unpack .../14-libgoogle-perftools4_2.9.1-0ubuntu3_amd64.deb ...
+Unpacking libgoogle-perftools4:amd64 (2.9.1-0ubuntu3) ...
+Selecting previously unselected package libgoogle-perftools-dev:amd64.
+Preparing to unpack .../15-libgoogle-perftools-dev_2.9.1-0ubuntu3_amd64.deb ...
+Unpacking libgoogle-perftools-dev:amd64 (2.9.1-0ubuntu3) ...
+Selecting previously unselected package libmbedtls-dev:amd64.
+Preparing to unpack .../16-libmbedtls-dev_2.28.0-1build1_amd64.deb ...
+Unpacking libmbedtls-dev:amd64 (2.28.0-1build1) ...
+Selecting previously unselected package libqt5multimedia5:amd64.
+Preparing to unpack .../17-libqt5multimedia5_5.15.3-1_amd64.deb ...
+Unpacking libqt5multimedia5:amd64 (5.15.3-1) ...
+Selecting previously unselected package libqt5multimediawidgets5:amd64.
+Preparing to unpack .../18-libqt5multimediawidgets5_5.15.3-1_amd64.deb ...
+Unpacking libqt5multimediawidgets5:amd64 (5.15.3-1) ...
+Selecting previously unselected package libqt5multimediagsttools5:amd64.
+Preparing to unpack .../19-libqt5multimediagsttools5_5.15.3-1_amd64.deb ...
+Unpacking libqt5multimediagsttools5:amd64 (5.15.3-1) ...
+Selecting previously unselected package libqt5multimediaquick5:amd64.
+Preparing to unpack .../20-libqt5multimediaquick5_5.15.3-1_amd64.deb ...
+Unpacking libqt5multimediaquick5:amd64 (5.15.3-1) ...
+Selecting previously unselected package libqt5xmlpatterns5:amd64.
+Preparing to unpack .../21-libqt5xmlpatterns5_5.15.3-1_amd64.deb ...
+Unpacking libqt5xmlpatterns5:amd64 (5.15.3-1) ...
+Selecting previously unselected package libqt5xmlpatterns5-dev:amd64.
+Preparing to unpack .../22-libqt5xmlpatterns5-dev_5.15.3-1_amd64.deb ...
+Unpacking libqt5xmlpatterns5-dev:amd64 (5.15.3-1) ...
+Selecting previously unselected package libssh2-1-dev:amd64.
+Preparing to unpack .../23-libssh2-1-dev_1.10.0-3_amd64.deb ...
+Unpacking libssh2-1-dev:amd64 (1.10.0-3) ...
+Selecting previously unselected package qtmultimedia5-dev:amd64.
+Preparing to unpack .../24-qtmultimedia5-dev_5.15.3-1_amd64.deb ...
+Unpacking qtmultimedia5-dev:amd64 (5.15.3-1) ...
+Selecting previously unselected package ruby3.0-dev:amd64.
+Preparing to unpack .../25-ruby3.0-dev_3.0.2-7ubuntu2.13_amd64.deb ...
+Unpacking ruby3.0-dev:amd64 (3.0.2-7ubuntu2.13) ...
+Selecting previously unselected package ruby-dev:amd64.
+Preparing to unpack .../26-ruby-dev_1%3a3.0~exp1_amd64.deb ...
+Unpacking ruby-dev:amd64 (1:3.0~exp1) ...
+Selecting previously unselected package tcl-tclreadline:amd64.
+Preparing to unpack .../27-tcl-tclreadline_2.3.8-1_amd64.deb ...
+Unpacking tcl-tclreadline:amd64 (2.3.8-1) ...
+Selecting previously unselected package libhttp-parser-dev.
+Preparing to unpack .../28-libhttp-parser-dev_2.9.4-4_amd64.deb ...
+Unpacking libhttp-parser-dev (2.9.4-4) ...
+Selecting previously unselected package libgit2-dev:amd64.
+Preparing to unpack .../29-libgit2-dev_1.1.0+dfsg.1-4.1ubuntu0.1_amd64.deb ...
+Unpacking libgit2-dev:amd64 (1.1.0+dfsg.1-4.1ubuntu0.1) ...
+Setting up libqt5xmlpatterns5:amd64 (5.15.3-1) ...
+Setting up tcl-tclreadline:amd64 (2.3.8-1) ...
+Setting up libcapnp-0.8.0:amd64 (0.8.0-2ubuntu2) ...
+Setting up libtcmalloc-minimal4:amd64 (2.9.1-0ubuntu3) ...
+Setting up libqt5xmlpatterns5-dev:amd64 (5.15.3-1) ...
+Setting up libqt5multimedia5:amd64 (5.15.3-1) ...
+Setting up help2man (1.49.1) ...
+Setting up capnproto (0.8.0-2ubuntu2) ...
+Setting up libqt5svg5-dev:amd64 (5.15.3-1) ...
+Setting up libgmpxx4ldbl:amd64 (2:6.2.1+dfsg-3ubuntu1) ...
+Setting up libmbedcrypto7:amd64 (2.28.0-1build1) ...
+Setting up libqt5multimediawidgets5:amd64 (5.15.3-1) ...
+Setting up libqt5multimediagsttools5:amd64 (5.15.3-1) ...
+Setting up libqt5multimediaquick5:amd64 (5.15.3-1) ...
+Setting up libssh2-1:amd64 (1.10.0-3) ...
+Setting up libcapnp-dev:amd64 (0.8.0-2ubuntu2) ...
+Setting up libhttp-parser2.9:amd64 (2.9.4-4) ...
+Setting up libgoogle-perftools4:amd64 (2.9.1-0ubuntu3) ...
+Setting up libhttp-parser-dev (2.9.4-4) ...
+Setting up libgmp-dev:amd64 (2:6.2.1+dfsg-3ubuntu1) ...
+Setting up qtmultimedia5-dev:amd64 (5.15.3-1) ...
+Setting up libmbedx509-1:amd64 (2.28.0-1build1) ...
+Setting up libmbedtls14:amd64 (2.28.0-1build1) ...
+Setting up libgit2-1.1:amd64 (1.1.0+dfsg.1-4.1ubuntu0.1) ...
+Setting up libgoogle-perftools-dev:amd64 (2.9.1-0ubuntu3) ...
+Setting up libmbedtls-dev:amd64 (2.28.0-1build1) ...
+Setting up ruby3.0-dev:amd64 (3.0.2-7ubuntu2.13) ...
+Setting up libssh2-1-dev:amd64 (1.10.0-3) ...
+Setting up libgit2-dev:amd64 (1.1.0+dfsg.1-4.1ubuntu0.1) ...
+Setting up ruby-dev:amd64 (1:3.0~exp1) ...
+Processing triggers for install-info (6.8-4build1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.15) ...
+Processing triggers for man-db (2.10.2-1) ...
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+--2026-09-12 23:39:59--  https://www.klayout.org/downloads/Ubuntu-22/klayout_0.30.12-1_amd64.deb
+Resolving www.klayout.org (www.klayout.org)... 178.77.102.107
+Connecting to www.klayout.org (www.klayout.org)|178.77.102.107|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 66033074 (63M) [application/x-debian-package]
+Saving to: ‘klayout_0.30.12-1_amd64.deb’
+
+klayout_0.30.12-1_a 100%[===================>]  62.97M  1.25MB/s    in 69s     
+
+2026-09-12 23:41:09 (941 KB/s) - ‘klayout_0.30.12-1_amd64.deb’ saved [66033074/66033074]
+
+klayout_0.30.12-1_amd64.deb: OK
+Selecting previously unselected package klayout.
+(Reading database ... 357767 files and directories currently installed.)
+Preparing to unpack klayout_0.30.12-1_amd64.deb ...
+Unpacking klayout (0.30.12-1) ...
+Setting up klayout (0.30.12-1) ...
+Processing triggers for mailcap (3.70+nmu1ubuntu1.22.04.1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+Docker is already installed, skip docker reinstall.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+[INFO] Install common development dependencies (-common or -all)
+[INFO] Checking CMake (System: none, Required: 3.31.9)
+[INFO] Downloading CMake... ✔
+[INFO] Verifying cmake-3.31.9-linux-x86_64.sh checksum... ✔
+[INFO] Installing CMake... ✔
+[INFO] Checking Bison (System: none, Required: 3.8.2)
+[INFO] Downloading Bison ✔
+[INFO] Verifying bison-3.8.2.tar.gz checksum... ✔
+[INFO] Extracting Bison... ✔
+[INFO] Configuring Bison... ✔
+[INFO] Building and installing Bison... ✔
+[INFO] Checking Flex (System: none, Required: 2.6.4)
+[INFO] Downloading Flex... ✔
+[INFO] Verifying flex-2.6.4.tar.gz checksum... ✔
+[INFO] Extracting Flex... ✔
+[INFO] Configuring Flex... ✔
+[INFO] Building Flex... ✔
+[INFO] Installing Flex... ✔
+[INFO] Checking PCRE (System: none, Required: 10.42)
+[INFO] Downloading PCRE... ✔
+[INFO] Verifying pcre2-10.42.tar.gz checksum... ✔
+[INFO] Extracting PCRE... ✔
+[INFO] Configuring PCRE... ✔
+[INFO] Building PCRE... ✔
+[INFO] Installing PCRE... ✔
+[INFO] Checking SWIG (System: none, Required: 4.3.0)
+[INFO] Downloading SWIG... ✔
+[INFO] Verifying v4.3.0.tar.gz checksum... ✔
+[INFO] Extracting SWIG... ✔
+[INFO] Checking PCRE (System: 10.42, Required: 10.42)
+[INFO] Generating SWIG configure script... ✔
+[INFO] Configuring SWIG... ✔
+[INFO] Building SWIG... ✔
+[INFO] Installing SWIG... ✔
+[INFO] Checking Boost (System: none, Required: 1.89)
+[INFO] Downloading Boost... ✔
+[INFO] Verifying boost_1_89_0.tar.gz checksum... ✔
+[INFO] Extracting Boost... ✔
+[INFO] Bootstrapping Boost... ✔
+[INFO] Installing Boost... ✔
+[INFO] Checking Eigen (System: none, Required: 3.4)
+[INFO] Cloning Eigen... ✔
+[INFO] Configuring Eigen... ✔
+[INFO] Building and installing Eigen... ✔
+[INFO] Checking CUDD (Required: 3.0.0)
+[INFO] Cloning CUDD... ✔
+[INFO] Generating CUDD configure script... ✔
+[INFO] Configuring CUDD... ✔
+[INFO] Building and installing CUDD... ✔
+[INFO] Checking CUSP
+[INFO] Cloning CUSP... ✔
+[INFO] Installing CUSP... ✔
+[INFO] Checking Lemon (System: none, Required: 1.3.1)
+[INFO] Cloning Lemon... ✔
+[INFO] Configuring Lemon... ✔
+[INFO] Building and installing Lemon... ✔
+[INFO] Checking spdlog (System: none, Required: 1.15.0)
+[INFO] Cloning spdlog... ✔
+[INFO] Configuring spdlog... ✔
+[INFO] Building and installing spdlog... ✔
+[INFO] Checking gtest (Required: 1.17.0)
+[INFO] Downloading gtest... ✔
+[INFO] Verifying v1.17.0.zip checksum... ✔
+[INFO] Extracting gtest... ✔
+[INFO] Configuring gtest... ✔
+[INFO] Building and installing gtest... ✔
+[INFO] Install equivalence dependencies (-eqy)...
+[INFO] Checking Yosys (System: none, Required: 0.68)
+[INFO] Cloning Yosys v0.68... ✔
+[INFO] Configuring Yosys... ✔
+[INFO] Building Yosys... ✔
+[INFO] Installing Yosys... ✔
+[INFO] Checking Eqy (System: none, Required: v0.68)
+[INFO] Cloning Eqy v0.68... ✔
+[INFO] Building Eqy... ✔
+[INFO] Installing Eqy... ✔
+[INFO] Checking Sby (System: none, Required: v0.68)
+[INFO] Cloning Sby v0.68... ✔
+[INFO] Installing Sby... ✔
+[INFO] Checking or-tools (System: none, Required: 9.14.6206)
+[INFO] Downloading or-tools... ✔
+[INFO] Extracting or-tools... ✔
+[INFO] Checking Abseil (System: 20250512, Required: 20250512)
+
+[INFO] Installation Summary
+=============================================================================================
+Package         | Path                      | Found           | Required        | Status    
+--------------- | ------------------------- | --------------- | --------------- | ----------
+CMake           | /home/surya...ependencies | none            | 3.31.9          | installed 
+Bison           | /home/surya...ependencies | none            | 3.8.2           | installed 
+Flex            | /home/surya...ependencies | none            | 2.6.4           | installed 
+PCRE            | /home/surya...ependencies | none            | 10.42           | installed 
+SWIG            | /home/surya...ependencies | none            | 4.3.0           | installed 
+Boost           | /home/surya...ependencies | none            | 1.89            | installed 
+Eigen           | /home/surya...ependencies | none            | 3.4             | installed 
+CUDD            | /home/surya...ependencies | none            | 3.0.0           | installed 
+CUSP            | /home/surya...ependencies | none            | any             | installed 
+Lemon           | /home/surya...ependencies | none            | 1.3.1           | installed 
+spdlog          | /home/surya...ependencies | none            | 1.15.0          | installed 
+gtest           | /home/surya...ependencies | none            | 1.17.0          | installed 
+Yosys           | /home/surya...ependencies | none            | 0.68            | installed 
+Eqy             | /home/surya...ependencies | none            | v0.68           | installed 
+Sby             | /home/surya...ependencies | none            | v0.68           | installed 
+or-tools        | /home/surya...es/or-tools | none            | 9.14.6206       | installed 
+Abseil          | /home/surya...es/or-tools | 20250512        | 20250512        | skipped   
+=============================================================================================
+Collecting pip==25.2
+  Downloading pip-25.2-py3-none-any.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 9.4 MB/s eta 0:00:00
+Installing collected packages: pip
+  WARNING: The scripts pip, pip3 and pip3.10 are installed in '/home/surya/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed pip-25.2
+Collecting annotated-doc==0.0.4 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 7))
+  Downloading annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+Collecting annotated-types==0.7.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 11))
+  Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Collecting certifi==2026.5.20 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 15))
+  Downloading certifi-2026.5.20-py3-none-any.whl (134 kB)
+Collecting cffi==2.0.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 19))
+  Downloading cffi-2.0.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (216 kB)
+Collecting charset-normalizer==3.4.7 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 105))
+  Downloading charset_normalizer-3.4.7-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (216 kB)
+Collecting click==8.4.1 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 236))
+  Downloading click-8.4.1-py3-none-any.whl (116 kB)
+Collecting cryptography==48.0.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 242))
+  Downloading cryptography-48.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 11.6 MB/s  0:00:00
+Collecting distro==1.9.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 293))
+  Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+Collecting google-api-core==2.30.3 (from google-api-core[grpc]==2.30.3->-r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 297))
+  Downloading google_api_core-2.30.3-py3-none-any.whl (173 kB)
+Collecting google-auth==2.53.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 301))
+  Downloading google_auth-2.53.0-py3-none-any.whl (246 kB)
+Collecting google-cloud-pubsub==2.39.1 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 307))
+  Downloading google_cloud_pubsub-2.39.1-py3-none-any.whl (323 kB)
+Collecting googleapis-common-protos==1.75.0 (from googleapis-common-protos[grpc]==1.75.0->-r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 311))
+  Downloading googleapis_common_protos-1.75.0-py3-none-any.whl (300 kB)
+Collecting grpc-google-iam-v1==0.14.5 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 318))
+  Downloading grpc_google_iam_v1-0.14.5-py3-none-any.whl (32 kB)
+Collecting grpcio==1.80.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 322))
+  Downloading grpcio-1.80.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.8/6.8 MB 11.7 MB/s  0:00:00
+Collecting grpcio-status==1.80.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 390))
+  Downloading grpcio_status-1.80.0-py3-none-any.whl (14 kB)
+Collecting idna==3.17 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 396))
+  Downloading idna-3.17-py3-none-any.whl (65 kB)
+Collecting loguru==0.7.3 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 400))
+  Downloading loguru-0.7.3-py3-none-any.whl (61 kB)
+Collecting maison==2.0.2 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 404))
+  Downloading maison-2.0.2-py3-none-any.whl (13 kB)
+Collecting markdown-it-py==4.2.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 408))
+  Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+Collecting mdurl==0.1.2 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 412))
+  Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Collecting numpy==2.2.6 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 416))
+  Downloading numpy-2.2.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 11.5 MB/s  0:00:01
+Collecting opentelemetry-api==1.44.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 475))
+  Downloading opentelemetry_api-1.44.0-py3-none-any.whl (60 kB)
+Collecting opentelemetry-sdk==1.44.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 482))
+  Downloading opentelemetry_sdk-1.44.0-py3-none-any.whl (137 kB)
+Collecting opentelemetry-semantic-conventions==0.65b0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 486))
+  Downloading opentelemetry_semantic_conventions-0.65b0-py3-none-any.whl (204 kB)
+Collecting pandas==2.3.3 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 490))
+  Downloading pandas-2.3.3-cp310-cp310-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 11.6 MB/s  0:00:01
+Collecting platformdirs==4.10.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 547))
+  Downloading platformdirs-4.10.0-py3-none-any.whl (22 kB)
+Collecting proto-plus==1.28.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 551))
+  Downloading proto_plus-1.28.0-py3-none-any.whl (50 kB)
+Collecting protobuf==6.33.6 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 557))
+  Downloading protobuf-6.33.6-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+Collecting pyasn1==0.6.3 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 575))
+  Downloading pyasn1-0.6.3-py3-none-any.whl (83 kB)
+Collecting pyasn1-modules==0.4.2 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 579))
+  Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+Collecting pycparser==3.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 583))
+  Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+Collecting pydantic==2.13.4 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 587))
+  Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+Collecting pydantic-core==2.46.4 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 591))
+  Downloading pydantic_core-2.46.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 11.7 MB/s  0:00:00
+Collecting pygments==2.20.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 713))
+  Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 12.0 MB/s  0:00:00
+Collecting python-dateutil==2.9.0.post0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 717))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Collecting pytz==2026.2 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 721))
+  Downloading pytz-2026.2-py2.py3-none-any.whl (510 kB)
+Collecting pyyaml==6.0.3 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 725))
+  Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 770.3/770.3 kB 11.9 MB/s  0:00:00
+Collecting requests==2.34.2 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 800))
+  Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Collecting rich==15.0.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 804))
+  Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Collecting ruyaml==0.91.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 808))
+  Downloading ruyaml-0.91.0-py3-none-any.whl (108 kB)
+Collecting shellingham==1.5.4 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 812))
+  Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Collecting six==1.17.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 816))
+  Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Collecting tomli==2.4.1 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 820))
+  Downloading tomli-2.4.1-py3-none-any.whl (14 kB)
+Collecting typer==0.26.3 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 869))
+  Downloading typer-0.26.3-py3-none-any.whl (122 kB)
+Collecting typing-extensions==4.15.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 873))
+  Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Collecting typing-inspection==0.4.2 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 886))
+  Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+Collecting tzdata==2026.2 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 890))
+  Downloading tzdata-2026.2-py2.py3-none-any.whl (349 kB)
+Collecting urllib3==2.7.0 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 894))
+  Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+Collecting yamlfix==1.19.1 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 898))
+  Downloading yamlfix-1.19.1-py3-none-any.whl (28 kB)
+Collecting setuptools==82.0.1 (from -r /home/surya/OpenROAD-flow-scripts/etc/requirements-common_lock.txt (line 904))
+  Downloading setuptools-82.0.1-py3-none-any.whl (1.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 12.0 MB/s  0:00:00
+WARNING: Error parsing dependencies of devscripts: Invalid version: '2.22.1ubuntu1.2'
+Installing collected packages: pytz, urllib3, tzdata, typing-extensions, tomli, six, shellingham, setuptools, pyyaml, pygments, pycparser, pyasn1, protobuf, platformdirs, numpy, mdurl, loguru, idna, distro, click, charset-normalizer, certifi, annotated-types, annotated-doc, typing-inspection, ruyaml, requests, python-dateutil, pydantic-core, pyasn1-modules, proto-plus, opentelemetry-api, markdown-it-py, grpcio, googleapis-common-protos, cffi, rich, pydantic, pandas, opentelemetry-semantic-conventions, grpcio-status, cryptography, typer, opentelemetry-sdk, grpc-google-iam-v1, google-auth, maison, google-api-core, yamlfix, google-cloud-pubsub
+   ━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  9/50 [pygments]  WARNING: The script pygmentize is installed in '/home/surya/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+   ━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14/50 [numpy]  WARNING: The scripts f2py and numpy-config are installed in '/home/surya/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script idna is installed in '/home/surya/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script distro is installed in '/home/surya/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━ 20/50 [charset-normalizer]  WARNING: The script normalizer is installed in '/home/surya/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━ 29/50 [pyasn1-modules]  WARNING: The script markdown-it is installed in '/home/surya/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━ 39/50 [opentelemetry-semantic-conventions]  WARNING: The script typer is installed in '/home/surya/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 47/50 [google-api-core]  WARNING: The script yamlfix is installed in '/home/surya/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+colcon-core 0.21.2 requires setuptools<80,>=30.3.0, but you have setuptools 82.0.1 which is incompatible.
+Successfully installed annotated-doc-0.0.4 annotated-types-0.7.0 certifi-2026.5.20 cffi-2.0.0 charset-normalizer-3.4.7 click-8.4.1 cryptography-48.0.0 distro-1.9.0 google-api-core-2.30.3 google-auth-2.53.0 google-cloud-pubsub-2.39.1 googleapis-common-protos-1.75.0 grpc-google-iam-v1-0.14.5 grpcio-1.80.0 grpcio-status-1.80.0 idna-3.17 loguru-0.7.3 maison-2.0.2 markdown-it-py-4.2.0 mdurl-0.1.2 numpy-2.2.6 opentelemetry-api-1.44.0 opentelemetry-sdk-1.44.0 opentelemetry-semantic-conventions-0.65b0 pandas-2.3.3 platformdirs-4.10.0 proto-plus-1.28.0 protobuf-6.33.6 pyasn1-0.6.3 pyasn1-modules-0.4.2 pycparser-3.0 pydantic-2.13.4 pydantic-core-2.46.4 pygments-2.20.0 python-dateutil-2.9.0.post0 pytz-2026.2 pyyaml-6.0.3 requests-2.34.2 rich-15.0.0 ruyaml-0.91.0 setuptools-82.0.1 shellingham-1.5.4 six-1.17.0 tomli-2.4.1 typer-0.26.3 typing-extensions-4.15.0 typing-inspection-0.4.2 tzdata-2026.2 urllib3-2.7.0 yamlfix-1.19.1
+
+[notice] A new release of pip is available: 25.2 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+surya@victus-gaming:~/OpenROAD-flow-scripts$ 
+

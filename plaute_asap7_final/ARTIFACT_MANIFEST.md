@@ -1,0 +1,28 @@
+# Artifact Manifest
+
+Generated package contents:
+
+- `.gitignore` (128 bytes)
+- `FINAL_PROJECT_REPORT.md` (17779 bytes)
+- `GIT_PUSH_INSTRUCTIONS.md` (1070 bytes)
+- `PROVENANCE.md` (1032 bytes)
+- `README.md` (1331 bytes)
+- `RESULTS_SUMMARY.md` (584 bytes)
+- `STATUS.md` (970 bytes)
+- `constraints/lut_gen_unit_5ns.sdc` (377 bytes)
+- `docs/EXTERNAL_REFERENCE_NOTE.md` (371 bytes)
+- `docs/SILGplus_Architecture_Proposal.docx` (15040 bytes)
+- `logs/captured_session_1.txt` (58017 bytes)
+- `logs/captured_session_2.txt` (104792 bytes)
+- `logs/captured_session_3.txt` (88014 bytes)
+- `netlist/genus/syn.sdc` (146072 bytes)
+- `netlist/genus/syn.v` (465482 bytes)
+- `reports/genus/area.rpt` (1691 bytes)
+- `reports/genus/power.rpt` (1206 bytes)
+- `reports/genus/timing.rpt` (3999 bytes)
+- `rtl/lut_gen_unit.v` (7018 bytes)
+- `scripts/collect_existing_orfs_results.sh` (828 bytes)
+- `synthesis/lut_gen_unit_syn.tcl` (4623 bytes)
+- `tb/tb_lut_gen_unit.v` (3163 bytes)
+- `verification/lut_gen_unit.vvp` (17627 bytes)
+- `verification/wave_uploaded_artifact` (17627 bytes)

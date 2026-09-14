@@ -1,0 +1,1015 @@
+party/abc/src/sat/bmc/bmcBmcS.c:733: warning: type 'struct Par_ThData_t_' violates the C++ One Definition Rule [-Wodr]
+#23 1972.4   733 | typedef struct Par_ThData_t_
+#23 1972.4       |
+#23 1972.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/proof/cec/cecProve.c:96: note: a different type is defined in another translation unit
+#23 1972.5    96 | typedef struct Par_ThData_t_
+#23 1972.5       |
+#23 1972.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcBmcS.c:735: note: the first difference of corresponding definitions is field 'pSat'
+#23 1972.5   735 |     bmc_sat_solver *  pSat;
+#23 1972.5       |
+#23 1972.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/proof/cec/cecProve.c:98: note: a field with different name is defined in another translation unit
+#23 1972.5    98 |     Gia_Man_t * p;
+#23 1972.5       |
+#23 1972.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/cov/covInt.h:37: warning: type 'struct Min_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 1972.9    37 | struct Min_Man_t_
+#23 1972.9       |
+#23 1972.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaPat2.c:35: note: a different type is defined in another translation unit
+#23 1972.9    35 | struct Min_Man_t_
+#23 1972.9       |
+#23 1972.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/cov/covInt.h:39: note: the first difference of corresponding definitions is field 'nVars'
+#23 1972.9    39 |     int               nVars;          // the number of vars
+#23 1972.9       |
+#23 1972.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaPat2.c:37: note: a field with different name is defined in another translation unit
+#23 1972.9    37 |     int              nCis;
+#23 1972.9       |
+#23 1973.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:41: warning: type 'struct Supp_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 1973.6    41 | struct Supp_Man_t_
+#23 1973.6       |
+#23 1973.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaSupps.c:35: note: a different type is defined in another translation unit
+#23 1973.6    35 | struct Supp_Man_t_
+#23 1973.6       |
+#23 1973.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:43: note: the first difference of corresponding definitions is field 'nChunkSize'
+#23 1973.6    43 |     int              nChunkSize;    // the size of one chunk of memory (~1 MB)
+#23 1973.6       |
+#23 1973.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaSupps.c:38: note: a field with different name is defined in another translation unit
+#23 1973.6    38 |     int         nIters;     // optimization rounds
+#23 1973.6       |
+#23 1974.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/bdd/llb/llb3Image.c:47: warning: type 'struct Llb_Mgr_t_' violates the C++ One Definition Rule [-Wodr]
+#23 1974.8    47 | struct Llb_Mgr_t_
+#23 1974.8       |
+#23 1974.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/bdd/llb/llb4Image.c:47: note: a different type is defined in another translation unit
+#23 1974.8    47 | struct Llb_Mgr_t_
+#23 1974.8       |
+#23 1974.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/bdd/llb/llb3Image.c:49: note: the first difference of corresponding definitions is field 'pAig'
+#23 1974.8    49 |     Aig_Man_t *   pAig;      // AIG manager
+#23 1974.8       |
+#23 1974.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/bdd/llb/llb4Image.c:49: note: a field with different name is defined in another translation unit
+#23 1974.8    49 |     DdManager *   dd;        // working BDD manager
+#23 1974.8       |
+#23 1981.7 [ 95%] Built target TestCongestionNets
+#23 1981.8 [ 95%] Generating est-tclInitVar.cc
+#23 1981.9 [ 95%] Swig compile EstimateParasitics.i for tcl
+#23 1982.6 [ 95%] Building CXX object src/est/src/CMakeFiles/est.dir/CMakeFiles/est.dir/EstimateParasiticsTCL_wrap.cxx.o
+#23 1997.1 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.hpp:534: warning: type of 'lefyylval' does not match original declaration [-Wlto-type-mismatch]
+#23 1997.1   534 | extern YYSTYPE lefyylval;
+#23 1997.1       |
+#23 1997.1 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: type name 'YYSTYPE' should match type name 'LefParser::YYSTYPE'
+#23 1997.1  3682 | YYSTYPE yylval;
+#23 1997.1       |
+#23 1997.1 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: 'lefyylval' was previously declared here
+#23 1997.1 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: code may be misoptimized unless '-fno-strict-aliasing' is used
+#23 1997.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/weaken.h:12: warning: 'kissat_weaken_clause' violates the C++ One Definition Rule [-Wodr]
+#23 1997.2    12 | void kissat_weaken_clause (struct kissat *, unsigned lit, struct clause *);
+#23 1997.2       |
+#23 1997.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/weaken.c:38: note: type mismatch in parameter 3
+#23 1997.2    38 | void kissat_weaken_clause (kissat *solver, unsigned lit, clause *c) {
+#23 1997.2       |
+#23 1997.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/weaken.c:38: note: 'kissat_weaken_clause' was previously declared here
+#23 1997.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/eliminate.h:19: warning: 'kissat_eliminate_clause' violates the C++ One Definition Rule [-Wodr]
+#23 1997.2    19 | void kissat_eliminate_clause (struct kissat *, struct clause *, unsigned);
+#23 1997.2       |
+#23 1997.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/eliminate.c:128: note: type mismatch in parameter 2
+#23 1997.2   128 | void kissat_eliminate_clause (kissat *solver, clause *c, unsigned lit) {
+#23 1997.2       |
+#23 1997.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/eliminate.c:128: note: 'kissat_eliminate_clause' was previously declared here
+#23 1997.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/strengthen.h:12: warning: 'kissat_on_the_fly_strengthen' violates the C++ One Definition Rule [-Wodr]
+#23 1997.2    12 | struct clause *kissat_on_the_fly_strengthen (struct kissat *,
+#23 1997.2       |
+#23 1997.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/strengthen.c:144: note: return value type mismatch
+#23 1997.2   144 | clause *kissat_on_the_fly_strengthen (kissat *solver, clause *c,
+#23 1997.2       |
+#23 1997.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/strengthen.c:144: note: 'kissat_on_the_fly_strengthen' was previously declared here
+#23 1997.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/strengthen.h:15: warning: 'kissat_on_the_fly_subsume' violates the C++ One Definition Rule [-Wodr]
+#23 1997.2    15 | void kissat_on_the_fly_subsume (struct kissat *, struct clause *,
+#23 1997.2       |
+#23 1997.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/strengthen.c:158: note: type mismatch in parameter 2
+#23 1997.2   158 | void kissat_on_the_fly_subsume (kissat *solver, clause *c, clause *d) {
+#23 1997.2       |
+#23 1997.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/strengthen.c:158: note: 'kissat_on_the_fly_subsume' was previously declared here
+#23 1997.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/deduce.h:15: warning: 'kissat_recompute_and_promote' violates the C++ One Definition Rule [-Wodr]
+#23 1997.2    15 | bool kissat_recompute_and_promote (struct kissat *, struct clause *);
+#23 1997.2       |
+#23 1997.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/deduce.c:31: note: type mismatch in parameter 2
+#23 1997.2    31 | bool kissat_recompute_and_promote (kissat *solver, clause *c) {
+#23 1997.2       |
+#23 1997.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/deduce.c:31: note: 'kissat_recompute_and_promote' was previously declared here
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/proprobe.h:12: warning: 'kissat_probing_propagate' violates the C++ One Definition Rule [-Wodr]
+#23 1997.3    12 | struct clause *kissat_probing_propagate (struct kissat *, struct clause *,
+#23 1997.3       |
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/proprobe.c:37: note: return value type mismatch
+#23 1997.3    37 | clause *kissat_probing_propagate (kissat *solver, clause *ignore,
+#23 1997.3       |
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/proprobe.c:37: note: 'kissat_probing_propagate' was previously declared here
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/deduce.h:12: warning: 'kissat_deduce_first_uip_clause' violates the C++ One Definition Rule [-Wodr]
+#23 1997.3    12 | struct clause *kissat_deduce_first_uip_clause (struct kissat *,
+#23 1997.3       |
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/deduce.c:72: note: return value type mismatch
+#23 1997.3    72 | clause *kissat_deduce_first_uip_clause (kissat *solver, clause *conflict) {
+#23 1997.3       |
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/deduce.c:72: note: 'kissat_deduce_first_uip_clause' was previously declared here
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/analyze.h:12: warning: 'kissat_analyze' violates the C++ One Definition Rule [-Wodr]
+#23 1997.3    12 | int kissat_analyze (struct kissat *, struct clause *);
+#23 1997.3       |
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/analyze.c:529: note: type mismatch in parameter 2
+#23 1997.3   529 | int kissat_analyze (kissat *solver, clause *conflict) {
+#23 1997.3       |
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/analyze.c:529: note: 'kissat_analyze' was previously declared here
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/propsearch.h:10: warning: 'kissat_search_propagate' violates the C++ One Definition Rule [-Wodr]
+#23 1997.3    10 | struct clause *kissat_search_propagate (struct kissat *);
+#23 1997.3       |
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/propsearch.c:46: note: return value type mismatch
+#23 1997.3    46 | clause *kissat_search_propagate (kissat *solver) {
+#23 1997.3       |
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/propsearch.c:46: note: 'kissat_search_propagate' was previously declared here
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/assign.h:57: warning: 'kissat_assign_reference' violates the C++ One Definition Rule [-Wodr]
+#23 1997.3    57 | void kissat_assign_reference (struct kissat *, unsigned lit, reference,
+#23 1997.3       |
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/assign.c:49: note: type mismatch in parameter 4
+#23 1997.3    49 | void kissat_assign_reference (kissat *solver, unsigned lit, reference ref,
+#23 1997.3       |
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/assign.c:49: note: 'kissat_assign_reference' was previously declared here
+#23 1997.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abc.c:61388: warning: 'Abc_BtorCat' violates the C++ One Definition Rule [-Wodr]
+#23 1997.3 61388 |     extern void Abc_BtorCat( char * pFileName, int fVerbose );
+#23 1997.3       |
+#23 1997.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/btor/catbtor.c:27: note: return value type mismatch
+#23 1997.4    27 | Abc_BtorCat (char* input_name, int verbosity)
+#23 1997.4       |
+#23 1997.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/btor/catbtor.c:27: note: type 'int32_t' should match type 'void'
+#23 1997.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/btor/catbtor.c:27: note: 'Abc_BtorCat' was previously declared here
+#23 2007.2 [ 95%] Built target TestNestedJournal
+#23 2007.2 [ 95%] Building CXX object src/rmp/src/CMakeFiles/rmp_lib.dir/Restructure.cpp.o
+#23 2007.5 [ 95%] Building CXX object src/est/src/CMakeFiles/est.dir/est-tclInitVar.cc.o
+#23 2007.6 [ 95%] Building CXX object src/est/src/CMakeFiles/est.dir/MakeEstimateParasitics.cpp.o
+#23 2025.7 [ 95%] Building CXX object src/est/src/CMakeFiles/est.dir/SteinerRenderer.cpp.o
+#23 2026.1 /usr/bin/ld: warning: libbz2.so.1, needed by /opt/or-tools/lib/libortools.so.9.14.6206, may conflict with libbz2.so.1.0
+#23 2027.2 [ 95%] Linking CXX executable TestEstimateParasitics
+#23 2029.6 [ 95%] Built target cts_unittest
+#23 2029.6 [ 95%] Generating cgt-tclInitVar.cc
+#23 2029.7 [ 95%] Swig compile cgt.i for tcl
+#23 2029.8 [ 95%] Built target mbff_test
+#23 2029.8 [ 95%] Generating messages.checked
+#23 2030.0 [ 95%] Building CXX object src/cgt/src/CMakeFiles/cgt.dir/CMakeFiles/cgt.dir/cgtTCL_wrap.cxx.o
+#23 2030.1 [ 95%] Built target cts_messages
+#23 2030.1 [ 95%] Swig compile pdnsim-py.i for python
+#23 2036.6 [ 95%] Generating psm_py-pythonInitVar.cc
+#23 2036.8 [ 95%] Building CXX object src/psm/src/CMakeFiles/psm_py.dir/CMakeFiles/psm_py.dir/pdnsim-pyPYTHON_wrap.cxx.o
+#23 2037.9 [ 95%] Linking CXX static library est.a
+#23 2038.0 [ 95%] Built target est
+#23 2038.0 [ 95%] Building CXX object src/syn/src/CMakeFiles/syn_lib.dir/synthesis.cpp.o
+#23 2039.6 [ 95%] Building CXX object src/cgt/src/CMakeFiles/cgt.dir/cgt-tclInitVar.cc.o
+#23 2039.7 [ 95%] Building CXX object src/cgt/src/CMakeFiles/cgt.dir/ClockGating.cpp.o
+#23 2039.7 [ 95%] Built target TestRepairHoldRollback
+#23 2039.7 [ 95%] Building CXX object src/psm/src/CMakeFiles/psm_py.dir/psm_py-pythonInitVar.cc.o
+#23 2039.7 [ 95%] Building CXX object src/rmp/src/CMakeFiles/rmp_lib.dir/annealing_strategy.cpp.o
+#23 2040.2 [ 95%] Built target TestResizerMt
+#23 2040.2 [ 95%] Building CXX object src/cgt/src/CMakeFiles/cgt.dir/MakeClockGating.cpp.o
+#23 2040.5 [ 95%] Building CXX object src/rmp/src/CMakeFiles/rmp_lib.dir/delay_optimization_strategy.cpp.o
+#23 2040.5 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.hpp:534: warning: type of 'lefyylval' does not match original declaration [-Wlto-type-mismatch]
+#23 2040.5   534 | extern YYSTYPE lefyylval;
+#23 2040.5       |
+#23 2040.5 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: type name 'YYSTYPE' should match type name 'LefParser::YYSTYPE'
+#23 2040.5  3682 | YYSTYPE yylval;
+#23 2040.5       |
+#23 2040.5 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: 'lefyylval' was previously declared here
+#23 2040.5 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: code may be misoptimized unless '-fno-strict-aliasing' is used
+#23 2041.9 [ 95%] Linking CXX static library _psm_py.a
+#23 2041.9 [ 95%] Built target psm_py
+#23 2041.9 [ 95%] Building CXX object src/cgt/src/CMakeFiles/cgt.dir/NetworkBuilder.cpp.o
+#23 2042.4 [ 95%] Building CXX object src/odb/test/cpp/CMakeFiles/TestWriteReadDbHier.dir/TestWriteReadDbHier.cpp.o
+#23 2047.1 [ 95%] Building CXX object src/dbSta/test/cpp/CMakeFiles/TestDbSta.dir/TestDbSta.cc.o
+#23 2055.2 [ 95%] Linking CXX static library libsyn_lib.a
+#23 2055.2 [ 95%] Built target syn_lib
+#23 2055.3 [ 95%] Building CXX object src/dbSta/test/cpp/CMakeFiles/TestReadVerilog.dir/TestReadVerilog.cpp.o
+#23 2058.4 In file included from /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/if.h:39,
+#23 2058.4                  from /OpenROAD-flow-scripts/tools/OpenROAD/src/rmp/src/annealing_strategy.cpp:18:
+#23 2058.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/util/utilTruth.h: In function 'abc::word abc::Abc_TtCheckDecOutOne7(abc::word*, int*, int*)':
+#23 2058.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/util/utilTruth.h:3191:18: warning: variable 'Type2' set but not used [-Wunused-but-set-variable]
+#23 2058.4  3191 |     int v, Type, Type2; word Out[2];
+#23 2058.4       |                  ^~~~~
+#23 2058.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/util/utilTruth.h: In function 'abc::word abc::Abc_TtCheckDecOutOne8(abc::word*, int*, int*, int*, int*)':
+#23 2058.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/util/utilTruth.h:3206:19: warning: variable 'Type12' set but not used [-Wunused-but-set-variable]
+#23 2058.4  3206 |     int v, Type1, Type12, Type2, Type22; word Out[4], Out2[2];
+#23 2058.4       |                   ^~~~~~
+#23 2058.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/util/utilTruth.h:3206:34: warning: variable 'Type22' set but not used [-Wunused-but-set-variable]
+#23 2058.4  3206 |     int v, Type1, Type12, Type2, Type22; word Out[4], Out2[2];
+#23 2058.4       |                                  ^~~~~~
+#23 2058.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/util/utilTruth.h: In function 'void abc::Abc_TtTestFullySymmetric()':
+#23 2058.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/util/utilTruth.h:3918:9: warning: variable 'PolarOut' set but not used [-Wunused-but-set-variable]
+#23 2058.4  3918 |     int PolarOut, PolarIn = 271;
+#23 2058.4       |         ^~~~~~~~
+#23 2058.4 In file included from /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/if.h:40,
+#23 2058.4                  from /OpenROAD-flow-scripts/tools/OpenROAD/src/rmp/src/annealing_strategy.cpp:18:
+#23 2058.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/opt/dau/dau.h: At global scope:
+#23 2058.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/opt/dau/dau.h:89:22: warning: redundant redeclaration of 'unsigned int abc::Abc_TtCanonicizeHie(abc::Abc_TtHieMan_t*, abc::word*, int, char*, int)' in same scope [-Wredundant-decls]
+#23 2058.4    89 | extern unsigned      Abc_TtCanonicizeHie(Abc_TtHieMan_t * p, word * pTruthInit, int nVars, char * pCanonPerm, int fExact);
+#23 2058.4       |                      ^~~~~~~~~~~~~~~~~~~
+#23 2058.4 In file included from /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/if.h:40,
+#23 2058.4                  from /OpenROAD-flow-scripts/tools/OpenROAD/src/rmp/src/annealing_strategy.cpp:18:
+#23 2058.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/opt/dau/dau.h:84:22: note: previous declaration of 'unsigned int abc::Abc_TtCanonicizeHie(abc::Abc_TtHieMan_t*, abc::word*, int, char*, int)'
+#23 2058.4    84 | extern unsigned      Abc_TtCanonicizeHie(Abc_TtHieMan_t * p, word * pTruth, int nVars, char * pCanonPerm, int fExact );
+#23 2058.4       |                      ^~~~~~~~~~~~~~~~~~~
+#23 2058.5 In file included from /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/if.h:41,
+#23 2058.5                  from /OpenROAD-flow-scripts/tools/OpenROAD/src/rmp/src/annealing_strategy.cpp:18:
+#23 2058.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/vec/vecHash.h: In function 'void abc::Hash_IntManHashArrayTest()':
+#23 2058.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/vec/vecHash.h:255:9: warning: variable 'RetValue' set but not used [-Wunused-but-set-variable]
+#23 2058.5   255 |     int RetValue;
+#23 2058.5       |         ^~~~~~~~
+#23 2058.5 In file included from /OpenROAD-flow-scripts/tools/OpenROAD/src/rmp/src/annealing_strategy.cpp:18:
+#23 2058.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/if.h: At global scope:
+#23 2058.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/if.h:560:24: warning: redundant redeclaration of 'void abc::If_CutCopy(abc::If_Man_t*, abc::If_Cut_t*, abc::If_Cut_t*)' in same scope [-Wredundant-decls]
+#23 2058.5   560 | extern void            If_CutCopy( If_Man_t * p, If_Cut_t * pCutDest, If_Cut_t * pCutSrc );
+#23 2058.5       |                        ^~~~~~~~~~
+#23 2058.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/if.h:454:26: note: previous declaration of 'void abc::If_CutCopy(abc::If_Man_t*, abc::If_Cut_t*, abc::If_Cut_t*)'
+#23 2058.5   454 | static inline void       If_CutCopy( If_Man_t * p, If_Cut_t * pDst, If_Cut_t * pSrc ) { memcpy( pDst, pSrc, (size_t)p->nCutBytes );      }
+#23 2058.5       |                          ^~~~~~~~~~
+#23 2058.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/if.h:745:24: warning: redundant redeclaration of 'int abc::acd_evaluate(abc::word*, unsigned int, int, unsigned int*, unsigned int*, int)' in same scope [-Wredundant-decls]
+#23 2058.5   745 | extern int             acd_evaluate( word * pTruth, unsigned nVars, int lutSize, unsigned *pdelay, unsigned *cost, int try_no_late_arrival );
+#23 2058.5       |                        ^~~~~~~~~~~~
+#23 2058.5 In file included from /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/if.h:43,
+#23 2058.5                  from /OpenROAD-flow-scripts/tools/OpenROAD/src/rmp/src/annealing_strategy.cpp:18:
+#23 2058.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/acd/ac_wrapper.h:35:5: note: previous declaration of 'int abc::acd_evaluate(abc::word*, unsigned int, int, unsigned int*, unsigned int*, int)'
+#23 2058.5    35 | int acd_evaluate( word * pTruth, unsigned nVars, int lutSize, unsigned *pdelay, unsigned *cost, int try_no_late_arrival );
+#23 2058.5       |     ^~~~~~~~~~~~
+#23 2058.5 In file included from /OpenROAD-flow-scripts/tools/OpenROAD/src/rmp/src/annealing_strategy.cpp:18:
+#23 2058.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/if.h:746:24: warning: redundant redeclaration of 'int abc::acd_decompose(abc::word*, unsigned int, int, unsigned int*, unsigned char*)' in same scope [-Wredundant-decls]
+#23 2058.5   746 | extern int             acd_decompose( word * pTruth, unsigned nVars, int lutSize, unsigned *pdelay, unsigned char *decomposition );
+#23 2058.5       |                        ^~~~~~~~~~~~~
+#23 2058.5 In file included from /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/if.h:43,
+#23 2058.5                  from /OpenROAD-flow-scripts/tools/OpenROAD/src/rmp/src/annealing_strategy.cpp:18:
+#23 2058.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/acd/ac_wrapper.h:36:5: note: previous declaration of 'int abc::acd_decompose(abc::word*, unsigned int, int, unsigned int*, unsigned char*)'
+#23 2058.5    36 | int acd_decompose( word * pTruth, unsigned nVars, int lutSize, unsigned *pdelay, unsigned char *decomposition );
+#23 2058.5       |     ^~~~~~~~~~~~~
+#23 2058.5 In file included from /OpenROAD-flow-scripts/tools/OpenROAD/src/rmp/src/annealing_strategy.cpp:18:
+#23 2058.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/if.h:747:24: warning: redundant redeclaration of 'int abc::acd2_evaluate(abc::word*, unsigned int, int, unsigned int*, unsigned int*, int)' in same scope [-Wredundant-decls]
+#23 2058.5   747 | extern int             acd2_evaluate( word * pTruth, unsigned nVars, int lutSize, unsigned *pdelay, unsigned *cost, int try_no_late_arrival );
+#23 2058.5       |                        ^~~~~~~~~~~~~
+#23 2058.5 In file included from /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/if.h:43,
+#23 2058.5                  from /OpenROAD-flow-scripts/tools/OpenROAD/src/rmp/src/annealing_strategy.cpp:18:
+#23 2058.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/acd/ac_wrapper.h:37:5: note: previous declaration of 'int abc::acd2_evaluate(abc::word*, unsigned int, int, unsigned int*, unsigned int*, int)'
+#23 2058.5    37 | int acd2_evaluate( word * pTruth, unsigned nVars, int lutSize, unsigned *pdelay, unsigned *cost, int try_no_late_arrival );
+#23 2058.5       |     ^~~~~~~~~~~~~
+#23 2058.5 In file included from /OpenROAD-flow-scripts/tools/OpenROAD/src/rmp/src/annealing_strategy.cpp:18:
+#23 2058.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/if.h:748:24: warning: redundant redeclaration of 'int abc::acd2_decompose(abc::word*, unsigned int, int, unsigned int*, unsigned char*)' in same scope [-Wredundant-decls]
+#23 2058.5   748 | extern int             acd2_decompose( word * pTruth, unsigned nVars, int lutSize, unsigned *pdelay, unsigned char *decomposition );
+#23 2058.5       |                        ^~~~~~~~~~~~~~
+#23 2058.5 In file included from /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/if.h:43,
+#23 2058.5                  from /OpenROAD-flow-scripts/tools/OpenROAD/src/rmp/src/annealing_strategy.cpp:18:
+#23 2058.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/acd/ac_wrapper.h:38:5: note: previous declaration of 'int abc::acd2_decompose(abc::word*, unsigned int, int, unsigned int*, unsigned char*)'
+#23 2058.5    38 | int acd2_decompose( word * pTruth, unsigned nVars, int lutSize, unsigned *pdelay, unsigned char *decomposition );
+#23 2058.5       |     ^~~~~~~~~~~~~~
+#23 2061.2 [ 95%] Building CXX object src/rmp/src/CMakeFiles/rmp_lib.dir/genetic_strategy.cpp.o
+#23 2062.7 [ 95%] Building CXX object src/rmp/src/CMakeFiles/rmp_lib.dir/gia.cpp.o
+#23 2070.1 [ 95%] Linking CXX executable TestWriteReadDbHier
+#23 2070.2 [ 95%] Linking CXX static library cgt.a
+#23 2070.4 [ 95%] Built target cgt
+#23 2070.4 [ 95%] Building CXX object src/dbSta/test/cpp/CMakeFiles/TestWriteVerilog.dir/TestWriteVerilog.cpp.o
+#23 2079.3 [ 95%] Linking CXX executable TestDbSta
+#23 2088.0 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.hpp:534: warning: type of 'lefyylval' does not match original declaration [-Wlto-type-mismatch]
+#23 2088.0   534 | extern YYSTYPE lefyylval;
+#23 2088.0       |
+#23 2088.0 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: type name 'YYSTYPE' should match type name 'LefParser::YYSTYPE'
+#23 2088.0  3682 | YYSTYPE yylval;
+#23 2088.0       |
+#23 2088.0 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: 'lefyylval' was previously declared here
+#23 2088.0 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: code may be misoptimized unless '-fno-strict-aliasing' is used
+#23 2091.8 [ 95%] Linking CXX executable TestReadVerilog
+#23 2095.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/cadical/cadical_decompose.cpp: In member function '_ZN3abc7CaDiCaL8Internal15decompose_roundEv.part.0':
+#23 2095.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/cadical/cadical_decompose.cpp:150:30: warning: argument 1 value '18446744073709551615' exceeds maximum object size 9223372036854775807 [-Walloc-size-larger-than=]
+#23 2095.7   150 |   DFS *dfs = new DFS[size_dfs];
+#23 2095.7       |                              ^
+#23 2095.7 /usr/include/c++/11/new:128:26: note: in a call to allocation function 'operator new []' declared here
+#23 2095.7   128 | _GLIBCXX_NODISCARD void* operator new[](std::size_t) _GLIBCXX_THROW (std::bad_alloc)
+#23 2095.7       |                          ^
+#23 2097.0 [ 95%] Building CXX object src/rmp/src/CMakeFiles/rmp_lib.dir/slack_tuning_strategy.cpp.o
+#23 2098.1 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.hpp:534: warning: type of 'lefyylval' does not match original declaration [-Wlto-type-mismatch]
+#23 2098.1   534 | extern YYSTYPE lefyylval;
+#23 2098.1       |
+#23 2098.1 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: type name 'YYSTYPE' should match type name 'LefParser::YYSTYPE'
+#23 2098.1  3682 | YYSTYPE yylval;
+#23 2098.1       |
+#23 2098.1 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: 'lefyylval' was previously declared here
+#23 2098.1 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: code may be misoptimized unless '-fno-strict-aliasing' is used
+#23 2100.8 [ 95%] Building CXX object src/rmp/src/CMakeFiles/rmp_lib.dir/utils.cpp.o
+#23 2105.3 [ 95%] Linking CXX executable TestWriteVerilog
+#23 2110.7 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.hpp:534: warning: type of 'lefyylval' does not match original declaration [-Wlto-type-mismatch]
+#23 2110.7   534 | extern YYSTYPE lefyylval;
+#23 2110.7       |
+#23 2110.7 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: type name 'YYSTYPE' should match type name 'LefParser::YYSTYPE'
+#23 2110.7  3682 | YYSTYPE yylval;
+#23 2110.7       |
+#23 2110.7 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: 'lefyylval' was previously declared here
+#23 2110.7 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: code may be misoptimized unless '-fno-strict-aliasing' is used
+#23 2128.4 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.hpp:534: warning: type of 'lefyylval' does not match original declaration [-Wlto-type-mismatch]
+#23 2128.4   534 | extern YYSTYPE lefyylval;
+#23 2128.4       |
+#23 2128.4 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: type name 'YYSTYPE' should match type name 'LefParser::YYSTYPE'
+#23 2128.4  3682 | YYSTYPE yylval;
+#23 2128.4       |
+#23 2128.4 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: 'lefyylval' was previously declared here
+#23 2128.4 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: code may be misoptimized unless '-fno-strict-aliasing' is used
+#23 2132.8 [ 95%] Built target TestEstimateParasitics
+#23 2132.8 [ 95%] Building CXX object src/dbSta/test/cpp/CMakeFiles/TestLambertW.dir/TestLambertW.cc.o
+#23 2134.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/extra/extraUtilPerm.c: In function 'Abc_EnumerateCubeStatesZdd':
+#23 2134.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/extra/extraUtilPerm.c:94:102: warning: iteration 171 invokes undefined behavior [-Waggressive-loop-optimizations]
+#23 2134.8    94 | static inline unsigned     Abc_ZddHash( int Arg0, int Arg1, int Arg2 )             { return 12582917 * Arg0 + 4256249 * Arg1 + 741457 * Arg2; }
+#23 2134.8       |                                                                                                      ^
+#23 2134.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/extra/extraUtilPerm.c:200:20: note: within this loop
+#23 2134.8   200 |     for ( i = 0; i < nVars; i++ )
+#23 2134.8       |                    ^
+#23 2141.4 [ 95%] Building CXX object src/rmp/src/CMakeFiles/rmp_lib.dir/zero_slack_strategy.cpp.o
+#23 2144.1 [ 95%] Building CXX object src/syn/test/CMakeFiles/opt_test.dir/opt_test.cc.o
+#23 2154.1 [ 95%] Linking CXX executable opt_test
+#23 2186.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcOrchestration.c:48: warning: type 'struct Abc_ManRes_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2186.9    48 | struct Abc_ManRes_t_
+#23 2186.9       |
+#23 2186.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcResub.c:36: note: a different type is defined in another translation unit
+#23 2186.9    36 | struct Abc_ManRes_t_
+#23 2186.9       |
+#23 2186.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcOrchestration.c:54: note: the first difference of corresponding definitions is field 'pRoot'
+#23 2186.9    54 |     Abc_Obj_t *        pRoot;      // the root of the cone
+#23 2186.9       |
+#23 2186.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcResub.c:42: note: a field with different name is defined in another translation unit
+#23 2186.9    42 |     int                Log2Probs;
+#23 2186.9       |
+#23 2187.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec16.c:38: warning: type 'struct If_Grp_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2187.7    38 | struct If_Grp_t_
+#23 2187.7       |
+#23 2187.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec66.c:37: note: a different type is defined in another translation unit
+#23 2187.7    37 | struct If_Grp_t_
+#23 2187.7       |
+#23 2187.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec16.c:42: note: the first difference of corresponding definitions is field 'pVars'
+#23 2187.7    42 |     char       pVars[CLU_VAR_MAX];
+#23 2187.7       |
+#23 2187.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec66.c:41: note: a field of same name but different type is defined in another translation unit
+#23 2187.7    41 |     char       pVars[CLU_VAR_MAX];
+#23 2187.7       |
+#23 2187.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec16.c:38: note: array types have different bounds
+#23 2187.7    38 | struct If_Grp_t_
+#23 2187.7       |
+#23 2189.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:426: warning: type 'struct Exa_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2189.9   426 | struct Exa_Man_t_
+#23 2189.9       |
+#23 2190.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:517: note: a different type is defined in another translation unit
+#23 2190.0   517 | struct Exa_Man_t_
+#23 2190.0       |
+#23 2190.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:436: note: the first difference of corresponding definitions is field 'VarMarks'
+#23 2190.0   436 |     int               VarMarks[MAJ_NOBJS][2][MAJ_NOBJS]; // variable marks
+#23 2190.0       |
+#23 2190.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:527: note: a field of same name but different type is defined in another translation unit
+#23 2190.0   527 |     int               VarMarks[MAJ_NOBJS][2][MAJ_NOBJS]; // variable marks
+#23 2190.0       |
+#23 2190.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:426: note: array types have different bounds
+#23 2190.0   426 | struct Exa_Man_t_
+#23 2190.0       |
+#23 2190.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:51: warning: type 'struct Maj_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2190.0    51 | struct Maj_Man_t_
+#23 2190.0       |
+#23 2190.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:36: note: a different type is defined in another translation unit
+#23 2190.0    36 | struct Maj_Man_t_
+#23 2190.0       |
+#23 2190.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:60: note: the first difference of corresponding definitions is field 'vInfo'
+#23 2190.0    60 |     Vec_Wrd_t *       vInfo;     // Const0 + Const1 + nVars + nNodes + Maj(nVars)
+#23 2190.0       |
+#23 2190.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:45: note: a field with different name is defined in another translation unit
+#23 2190.0    45 |     int               fUseRand;  // use random topology
+#23 2190.0       |
+#23 2190.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:1154: warning: type 'struct Exa3_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2190.0  1154 | struct Exa3_Man_t_
+#23 2190.0       |
+#23 2190.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:1051: note: a different type is defined in another translation unit
+#23 2190.0  1051 | struct Exa3_Man_t_
+#23 2190.0       |
+#23 2190.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:1166: note: the first difference of corresponding definitions is field 'vUsed2'
+#23 2190.0  1166 |     Vec_Bit_t *       vUsed2;    // bit masks
+#23 2190.0       |
+#23 2190.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:1063: note: a field with different name is defined in another translation unit
+#23 2190.0  1063 |     int               VarMarks[MAJ_NOBJS][6][MAJ_NOBJS]; // variable marks
+#23 2190.0       |
+#23 2190.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/satoko/clause.h:17: warning: type 'struct clause' violates the C++ One Definition Rule [-Wodr]
+#23 2190.1    17 | struct clause {
+#23 2190.1       |
+#23 2190.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/clause.h:22: note: a different type is defined in another translation unit
+#23 2190.1    22 | struct clause {
+#23 2190.1       |
+#23 2190.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/satoko/clause.h:18: note: the first difference of corresponding definitions is field 'f_learnt'
+#23 2190.1    18 |     unsigned f_learnt    : 1;
+#23 2190.1       |
+#23 2190.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/clause.h:23: note: a field with different name is defined in another translation unit
+#23 2190.1    23 |   unsigned glue : LD_MAX_GLUE;
+#23 2190.1       |
+#23 2190.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcBmcS.c:733: warning: type 'struct Par_ThData_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2190.6   733 | typedef struct Par_ThData_t_
+#23 2190.6       |
+#23 2190.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/proof/cec/cecProve.c:96: note: a different type is defined in another translation unit
+#23 2190.6    96 | typedef struct Par_ThData_t_
+#23 2190.6       |
+#23 2190.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcBmcS.c:735: note: the first difference of corresponding definitions is field 'pSat'
+#23 2190.6   735 |     bmc_sat_solver *  pSat;
+#23 2190.6       |
+#23 2190.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/proof/cec/cecProve.c:98: note: a field with different name is defined in another translation unit
+#23 2190.6    98 |     Gia_Man_t * p;
+#23 2190.6       |
+#23 2191.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/cov/covInt.h:37: warning: type 'struct Min_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2191.7    37 | struct Min_Man_t_
+#23 2191.7       |
+#23 2191.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaPat2.c:35: note: a different type is defined in another translation unit
+#23 2191.7    35 | struct Min_Man_t_
+#23 2191.7       |
+#23 2191.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/cov/covInt.h:39: note: the first difference of corresponding definitions is field 'nVars'
+#23 2191.7    39 |     int               nVars;          // the number of vars
+#23 2191.7       |
+#23 2191.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaPat2.c:37: note: a field with different name is defined in another translation unit
+#23 2191.7    37 |     int              nCis;
+#23 2191.7       |
+#23 2192.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:1285: warning: type 'struct StochSynData_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2192.2  1285 | typedef struct StochSynData_t_
+#23 2192.2       |
+#23 2192.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaStoch.c:155: note: a different type is defined in another translation unit
+#23 2192.2   155 | typedef struct StochSynData_t_
+#23 2192.2       |
+#23 2192.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:1287: note: the first difference of corresponding definitions is field 'pIn'
+#23 2192.2  1287 |     Abc_Ntk_t *  pIn;
+#23 2192.2       |
+#23 2192.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaStoch.c:157: note: a field of same name but different type is defined in another translation unit
+#23 2192.2   157 |     Gia_Man_t *  pIn;
+#23 2192.2       |
+#23 2192.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:1285: note: type name 'abc::Abc_Ntk_t_' should match type name 'abc::Gia_Man_t_'
+#23 2192.2  1285 | typedef struct StochSynData_t_
+#23 2192.2       |
+#23 2192.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:41: warning: type 'struct Supp_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2192.2    41 | struct Supp_Man_t_
+#23 2192.2       |
+#23 2192.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaSupps.c:35: note: a different type is defined in another translation unit
+#23 2192.2    35 | struct Supp_Man_t_
+#23 2192.2       |
+#23 2192.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:43: note: the first difference of corresponding definitions is field 'nChunkSize'
+#23 2192.2    43 |     int              nChunkSize;    // the size of one chunk of memory (~1 MB)
+#23 2192.2       |
+#23 2192.2 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaSupps.c:38: note: a field with different name is defined in another translation unit
+#23 2192.2    38 |     int         nIters;     // optimization rounds
+#23 2192.2       |
+#23 2192.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose/Glucose.cpp:913: warning: type 'struct reduceDB_lt' violates the C++ One Definition Rule [-Wodr]
+#23 2192.9   913 | struct reduceDB_lt {
+#23 2192.9       |
+#23 2192.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose2/Glucose2.cpp:1073: note: a different type is defined in another translation unit
+#23 2192.9  1073 | struct reduceDB_lt {
+#23 2192.9       |
+#23 2192.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose/Glucose.cpp:914: note: the first difference of corresponding definitions is field 'ca'
+#23 2192.9   914 |     ClauseAllocator& ca;
+#23 2192.9       |
+#23 2192.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose2/Glucose2.cpp:1074: note: a field of same name but different type is defined in another translation unit
+#23 2192.9  1074 |     ClauseAllocator& ca;
+#23 2192.9       |
+#23 2192.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose/SolverTypes.h:217: note: type name 'abc::Gluco::ClauseAllocator' should match type name 'abc::Gluco2::ClauseAllocator'
+#23 2192.9   217 | class ClauseAllocator : public RegionAllocator<uint32_t>
+#23 2192.9       |
+#23 2192.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose2/SolverTypes.h:223: note: the incompatible type is defined here
+#23 2192.9   223 | class ClauseAllocator : public RegionAllocator<uint32_t>
+#23 2192.9       |
+#23 2193.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/statistics.h:315: warning: type 'struct statistics' violates the C++ One Definition Rule [-Wodr]
+#23 2193.7   315 | struct statistics
+#23 2193.7       |
+#23 2193.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/cadical/cadical_kitten.c:114: note: a different type is defined in another translation unit
+#23 2193.7   114 | struct statistics {
+#23 2193.7       |
+#23 2193.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/statistics.h:321: note: the first difference of corresponding definitions is field 'backbone_computations'
+#23 2193.7   321 |   METRICS_COUNTERS_AND_STATISTICS
+#23 2193.7       |
+#23 2193.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/cadical/cadical_kitten.c:115: note: a field with different name is defined in another translation unit
+#23 2193.7   115 |   uint64_t learned;
+#23 2193.7       |
+#23 2193.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/bdd/llb/llb3Image.c:47: warning: type 'struct Llb_Mgr_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2193.9    47 | struct Llb_Mgr_t_
+#23 2193.9       |
+#23 2193.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/bdd/llb/llb4Image.c:47: note: a different type is defined in another translation unit
+#23 2193.9    47 | struct Llb_Mgr_t_
+#23 2193.9       |
+#23 2193.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/bdd/llb/llb3Image.c:49: note: the first difference of corresponding definitions is field 'pAig'
+#23 2193.9    49 |     Aig_Man_t *   pAig;      // AIG manager
+#23 2193.9       |
+#23 2193.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/bdd/llb/llb4Image.c:49: note: a field with different name is defined in another translation unit
+#23 2193.9    49 |     DdManager *   dd;        // working BDD manager
+#23 2193.9       |
+#23 2194.6 In function 'Gia_ManCreateMuxRefs',
+#23 2194.6     inlined from 'Cof_ManCreateLogicSimple' at /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaCof.c:181:36,
+#23 2194.6     inlined from 'Gia_ManPrintFanio' at /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaCof.c:750:33,
+#23 2194.6     inlined from 'Abc_CommandAbc9PFan' at /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abc.c:36179:22:
+#23 2194.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaUtil.c:832:16: warning: argument 1 range [18446744071562067968, 18446744073709551615] exceeds maximum object size 9223372036854775807 [-Walloc-size-larger-than=]
+#23 2194.7   832 |     pMuxRefs = ABC_CALLOC( int, Gia_ManObjNum(p) );
+#23 2194.7       |                ^
+#23 2194.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaUtil.c: In function 'Abc_CommandAbc9PFan':
+#23 2194.7 /usr/include/stdlib.h:543: note: in a call to allocation function 'calloc' declared here
+#23 2194.7   543 | extern void *calloc (size_t __nmemb, size_t __size)
+#23 2194.7       |
+#23 2200.9 [ 95%] Linking CXX static library librmp_lib.a
+#23 2201.2 [ 95%] Built target rmp_lib
+#23 2201.3 [ 95%] Building CXX object src/syn/test/CMakeFiles/bitblast_test.dir/bitblast_test.cc.o
+#23 2201.6 [ 95%] Built target TestWriteReadDbHier
+#23 2201.7 [ 95%] Building CXX object src/syn/test/CMakeFiles/liveness_test.dir/liveness_test.cc.o
+#23 2203.9 [ 95%] Linking CXX executable TestLambertW
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/weaken.h:12: warning: 'kissat_weaken_clause' violates the C++ One Definition Rule [-Wodr]
+#23 2208.6    12 | void kissat_weaken_clause (struct kissat *, unsigned lit, struct clause *);
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/weaken.c:38: note: type mismatch in parameter 3
+#23 2208.6    38 | void kissat_weaken_clause (kissat *solver, unsigned lit, clause *c) {
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/weaken.c:38: note: 'kissat_weaken_clause' was previously declared here
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/eliminate.h:19: warning: 'kissat_eliminate_clause' violates the C++ One Definition Rule [-Wodr]
+#23 2208.6    19 | void kissat_eliminate_clause (struct kissat *, struct clause *, unsigned);
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/eliminate.c:128: note: type mismatch in parameter 2
+#23 2208.6   128 | void kissat_eliminate_clause (kissat *solver, clause *c, unsigned lit) {
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/eliminate.c:128: note: 'kissat_eliminate_clause' was previously declared here
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/strengthen.h:12: warning: 'kissat_on_the_fly_strengthen' violates the C++ One Definition Rule [-Wodr]
+#23 2208.6    12 | struct clause *kissat_on_the_fly_strengthen (struct kissat *,
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/strengthen.c:144: note: return value type mismatch
+#23 2208.6   144 | clause *kissat_on_the_fly_strengthen (kissat *solver, clause *c,
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/strengthen.c:144: note: 'kissat_on_the_fly_strengthen' was previously declared here
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/strengthen.h:15: warning: 'kissat_on_the_fly_subsume' violates the C++ One Definition Rule [-Wodr]
+#23 2208.6    15 | void kissat_on_the_fly_subsume (struct kissat *, struct clause *,
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/strengthen.c:158: note: type mismatch in parameter 2
+#23 2208.6   158 | void kissat_on_the_fly_subsume (kissat *solver, clause *c, clause *d) {
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/strengthen.c:158: note: 'kissat_on_the_fly_subsume' was previously declared here
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/deduce.h:15: warning: 'kissat_recompute_and_promote' violates the C++ One Definition Rule [-Wodr]
+#23 2208.6    15 | bool kissat_recompute_and_promote (struct kissat *, struct clause *);
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/deduce.c:31: note: type mismatch in parameter 2
+#23 2208.6    31 | bool kissat_recompute_and_promote (kissat *solver, clause *c) {
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/deduce.c:31: note: 'kissat_recompute_and_promote' was previously declared here
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/proprobe.h:12: warning: 'kissat_probing_propagate' violates the C++ One Definition Rule [-Wodr]
+#23 2208.6    12 | struct clause *kissat_probing_propagate (struct kissat *, struct clause *,
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/proprobe.c:37: note: return value type mismatch
+#23 2208.6    37 | clause *kissat_probing_propagate (kissat *solver, clause *ignore,
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/proprobe.c:37: note: 'kissat_probing_propagate' was previously declared here
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/deduce.h:12: warning: 'kissat_deduce_first_uip_clause' violates the C++ One Definition Rule [-Wodr]
+#23 2208.6    12 | struct clause *kissat_deduce_first_uip_clause (struct kissat *,
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/deduce.c:72: note: return value type mismatch
+#23 2208.6    72 | clause *kissat_deduce_first_uip_clause (kissat *solver, clause *conflict) {
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/deduce.c:72: note: 'kissat_deduce_first_uip_clause' was previously declared here
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/analyze.h:12: warning: 'kissat_analyze' violates the C++ One Definition Rule [-Wodr]
+#23 2208.6    12 | int kissat_analyze (struct kissat *, struct clause *);
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/analyze.c:529: note: type mismatch in parameter 2
+#23 2208.6   529 | int kissat_analyze (kissat *solver, clause *conflict) {
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/analyze.c:529: note: 'kissat_analyze' was previously declared here
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/propsearch.h:10: warning: 'kissat_search_propagate' violates the C++ One Definition Rule [-Wodr]
+#23 2208.6    10 | struct clause *kissat_search_propagate (struct kissat *);
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/propsearch.c:46: note: return value type mismatch
+#23 2208.6    46 | clause *kissat_search_propagate (kissat *solver) {
+#23 2208.6       |
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/propsearch.c:46: note: 'kissat_search_propagate' was previously declared here
+#23 2208.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/assign.h:57: warning: 'kissat_assign_reference' violates the C++ One Definition Rule [-Wodr]
+#23 2208.6    57 | void kissat_assign_reference (struct kissat *, unsigned lit, reference,
+#23 2208.6       |
+#23 2208.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/assign.c:49: note: type mismatch in parameter 4
+#23 2208.7    49 | void kissat_assign_reference (kissat *solver, unsigned lit, reference ref,
+#23 2208.7       |
+#23 2208.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/assign.c:49: note: 'kissat_assign_reference' was previously declared here
+#23 2208.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abc.c:61388: warning: 'Abc_BtorCat' violates the C++ One Definition Rule [-Wodr]
+#23 2208.7 61388 |     extern void Abc_BtorCat( char * pFileName, int fVerbose );
+#23 2208.7       |
+#23 2208.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/btor/catbtor.c:27: note: return value type mismatch
+#23 2208.7    27 | Abc_BtorCat (char* input_name, int verbosity)
+#23 2208.7       |
+#23 2208.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/btor/catbtor.c:27: note: type 'int32_t' should match type 'void'
+#23 2208.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/misc/btor/catbtor.c:27: note: 'Abc_BtorCat' was previously declared here
+#23 2214.2 [ 95%] Linking CXX executable liveness_test
+#23 2216.9 [ 95%] Built target TestDbSta
+#23 2217.0 [ 95%] Building CXX object src/syn/test/CMakeFiles/npn_test.dir/npn_test.cc.o
+#23 2221.5 [ 95%] Linking CXX executable bitblast_test
+#23 2223.3 [ 95%] Linking CXX executable npn_test
+#23 2229.0 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.hpp:534: warning: type of 'lefyylval' does not match original declaration [-Wlto-type-mismatch]
+#23 2229.0   534 | extern YYSTYPE lefyylval;
+#23 2229.0       |
+#23 2229.0 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: type name 'YYSTYPE' should match type name 'LefParser::YYSTYPE'
+#23 2229.0  3682 | YYSTYPE yylval;
+#23 2229.0       |
+#23 2229.0 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: 'lefyylval' was previously declared here
+#23 2229.0 /OpenROAD-flow-scripts/tools/OpenROAD/build/src/odb/src/lef/lef_parser.cpp:3682: note: code may be misoptimized unless '-fno-strict-aliasing' is used
+#23 2230.8 [ 95%] Built target TestReadVerilog
+#23 2230.8 [ 95%] Building CXX object src/syn/test/CMakeFiles/abc_test.dir/abc_test.cc.o
+#23 2231.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcOrchestration.c:48: warning: type 'struct Abc_ManRes_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2231.9    48 | struct Abc_ManRes_t_
+#23 2231.9       |
+#23 2231.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcResub.c:36: note: a different type is defined in another translation unit
+#23 2231.9    36 | struct Abc_ManRes_t_
+#23 2231.9       |
+#23 2231.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcOrchestration.c:54: note: the first difference of corresponding definitions is field 'pRoot'
+#23 2231.9    54 |     Abc_Obj_t *        pRoot;      // the root of the cone
+#23 2231.9       |
+#23 2231.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcResub.c:42: note: a field with different name is defined in another translation unit
+#23 2231.9    42 |     int                Log2Probs;
+#23 2231.9       |
+#23 2232.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec16.c:38: warning: type 'struct If_Grp_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2232.4    38 | struct If_Grp_t_
+#23 2232.4       |
+#23 2232.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec66.c:37: note: a different type is defined in another translation unit
+#23 2232.4    37 | struct If_Grp_t_
+#23 2232.4       |
+#23 2232.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec16.c:42: note: the first difference of corresponding definitions is field 'pVars'
+#23 2232.4    42 |     char       pVars[CLU_VAR_MAX];
+#23 2232.4       |
+#23 2232.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec66.c:41: note: a field of same name but different type is defined in another translation unit
+#23 2232.4    41 |     char       pVars[CLU_VAR_MAX];
+#23 2232.4       |
+#23 2232.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec16.c:38: note: array types have different bounds
+#23 2232.4    38 | struct If_Grp_t_
+#23 2232.4       |
+#23 2233.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:426: warning: type 'struct Exa_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2233.8   426 | struct Exa_Man_t_
+#23 2233.8       |
+#23 2233.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:517: note: a different type is defined in another translation unit
+#23 2233.8   517 | struct Exa_Man_t_
+#23 2233.8       |
+#23 2233.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:436: note: the first difference of corresponding definitions is field 'VarMarks'
+#23 2233.8   436 |     int               VarMarks[MAJ_NOBJS][2][MAJ_NOBJS]; // variable marks
+#23 2233.8       |
+#23 2233.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:527: note: a field of same name but different type is defined in another translation unit
+#23 2233.8   527 |     int               VarMarks[MAJ_NOBJS][2][MAJ_NOBJS]; // variable marks
+#23 2233.8       |
+#23 2233.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:426: note: array types have different bounds
+#23 2233.8   426 | struct Exa_Man_t_
+#23 2233.8       |
+#23 2233.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:51: warning: type 'struct Maj_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2233.8    51 | struct Maj_Man_t_
+#23 2233.8       |
+#23 2233.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:36: note: a different type is defined in another translation unit
+#23 2233.8    36 | struct Maj_Man_t_
+#23 2233.8       |
+#23 2233.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:60: note: the first difference of corresponding definitions is field 'vInfo'
+#23 2233.8    60 |     Vec_Wrd_t *       vInfo;     // Const0 + Const1 + nVars + nNodes + Maj(nVars)
+#23 2233.8       |
+#23 2233.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:45: note: a field with different name is defined in another translation unit
+#23 2233.8    45 |     int               fUseRand;  // use random topology
+#23 2233.8       |
+#23 2233.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:1154: warning: type 'struct Exa3_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2233.8  1154 | struct Exa3_Man_t_
+#23 2233.8       |
+#23 2233.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:1051: note: a different type is defined in another translation unit
+#23 2233.8  1051 | struct Exa3_Man_t_
+#23 2233.8       |
+#23 2233.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:1166: note: the first difference of corresponding definitions is field 'vUsed2'
+#23 2233.8  1166 |     Vec_Bit_t *       vUsed2;    // bit masks
+#23 2233.8       |
+#23 2233.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:1063: note: a field with different name is defined in another translation unit
+#23 2233.8  1063 |     int               VarMarks[MAJ_NOBJS][6][MAJ_NOBJS]; // variable marks
+#23 2233.8       |
+#23 2233.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/satoko/clause.h:17: warning: type 'struct clause' violates the C++ One Definition Rule [-Wodr]
+#23 2233.9    17 | struct clause {
+#23 2233.9       |
+#23 2233.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/clause.h:22: note: a different type is defined in another translation unit
+#23 2233.9    22 | struct clause {
+#23 2233.9       |
+#23 2233.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/satoko/clause.h:18: note: the first difference of corresponding definitions is field 'f_learnt'
+#23 2233.9    18 |     unsigned f_learnt    : 1;
+#23 2233.9       |
+#23 2233.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/clause.h:23: note: a field with different name is defined in another translation unit
+#23 2233.9    23 |   unsigned glue : LD_MAX_GLUE;
+#23 2233.9       |
+#23 2234.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcBmcS.c:733: warning: type 'struct Par_ThData_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2234.1   733 | typedef struct Par_ThData_t_
+#23 2234.1       |
+#23 2234.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/proof/cec/cecProve.c:96: note: a different type is defined in another translation unit
+#23 2234.1    96 | typedef struct Par_ThData_t_
+#23 2234.1       |
+#23 2234.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcBmcS.c:735: note: the first difference of corresponding definitions is field 'pSat'
+#23 2234.1   735 |     bmc_sat_solver *  pSat;
+#23 2234.1       |
+#23 2234.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/proof/cec/cecProve.c:98: note: a field with different name is defined in another translation unit
+#23 2234.1    98 |     Gia_Man_t * p;
+#23 2234.1       |
+#23 2234.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/cov/covInt.h:37: warning: type 'struct Min_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2234.7    37 | struct Min_Man_t_
+#23 2234.7       |
+#23 2234.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaPat2.c:35: note: a different type is defined in another translation unit
+#23 2234.7    35 | struct Min_Man_t_
+#23 2234.7       |
+#23 2234.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/cov/covInt.h:39: note: the first difference of corresponding definitions is field 'nVars'
+#23 2234.7    39 |     int               nVars;          // the number of vars
+#23 2234.7       |
+#23 2234.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaPat2.c:37: note: a field with different name is defined in another translation unit
+#23 2234.7    37 |     int              nCis;
+#23 2234.7       |
+#23 2235.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:1285: warning: type 'struct StochSynData_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2235.1  1285 | typedef struct StochSynData_t_
+#23 2235.1       |
+#23 2235.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaStoch.c:155: note: a different type is defined in another translation unit
+#23 2235.1   155 | typedef struct StochSynData_t_
+#23 2235.1       |
+#23 2235.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:1287: note: the first difference of corresponding definitions is field 'pIn'
+#23 2235.1  1287 |     Abc_Ntk_t *  pIn;
+#23 2235.1       |
+#23 2235.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaStoch.c:157: note: a field of same name but different type is defined in another translation unit
+#23 2235.1   157 |     Gia_Man_t *  pIn;
+#23 2235.1       |
+#23 2235.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:1285: note: type name 'abc::Abc_Ntk_t_' should match type name 'abc::Gia_Man_t_'
+#23 2235.1  1285 | typedef struct StochSynData_t_
+#23 2235.1       |
+#23 2235.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:41: warning: type 'struct Supp_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2235.1    41 | struct Supp_Man_t_
+#23 2235.1       |
+#23 2235.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaSupps.c:35: note: a different type is defined in another translation unit
+#23 2235.1    35 | struct Supp_Man_t_
+#23 2235.1       |
+#23 2235.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:43: note: the first difference of corresponding definitions is field 'nChunkSize'
+#23 2235.1    43 |     int              nChunkSize;    // the size of one chunk of memory (~1 MB)
+#23 2235.1       |
+#23 2235.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaSupps.c:38: note: a field with different name is defined in another translation unit
+#23 2235.1    38 |     int         nIters;     // optimization rounds
+#23 2235.1       |
+#23 2235.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose/Glucose.cpp:913: warning: type 'struct reduceDB_lt' violates the C++ One Definition Rule [-Wodr]
+#23 2235.8   913 | struct reduceDB_lt {
+#23 2235.8       |
+#23 2235.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose2/Glucose2.cpp:1073: note: a different type is defined in another translation unit
+#23 2235.8  1073 | struct reduceDB_lt {
+#23 2235.8       |
+#23 2235.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose/Glucose.cpp:914: note: the first difference of corresponding definitions is field 'ca'
+#23 2235.8   914 |     ClauseAllocator& ca;
+#23 2235.8       |
+#23 2235.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose2/Glucose2.cpp:1074: note: a field of same name but different type is defined in another translation unit
+#23 2235.8  1074 |     ClauseAllocator& ca;
+#23 2235.8       |
+#23 2235.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose/SolverTypes.h:217: note: type name 'abc::Gluco::ClauseAllocator' should match type name 'abc::Gluco2::ClauseAllocator'
+#23 2235.8   217 | class ClauseAllocator : public RegionAllocator<uint32_t>
+#23 2235.8       |
+#23 2235.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose2/SolverTypes.h:223: note: the incompatible type is defined here
+#23 2235.8   223 | class ClauseAllocator : public RegionAllocator<uint32_t>
+#23 2235.8       |
+#23 2236.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/statistics.h:315: warning: type 'struct statistics' violates the C++ One Definition Rule [-Wodr]
+#23 2236.3   315 | struct statistics
+#23 2236.3       |
+#23 2236.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/cadical/cadical_kitten.c:114: note: a different type is defined in another translation unit
+#23 2236.3   114 | struct statistics {
+#23 2236.3       |
+#23 2236.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/statistics.h:321: note: the first difference of corresponding definitions is field 'backbone_computations'
+#23 2236.3   321 |   METRICS_COUNTERS_AND_STATISTICS
+#23 2236.3       |
+#23 2236.3 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/cadical/cadical_kitten.c:115: note: a field with different name is defined in another translation unit
+#23 2236.3   115 |   uint64_t learned;
+#23 2236.3       |
+#23 2236.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/bdd/llb/llb3Image.c:47: warning: type 'struct Llb_Mgr_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2236.4    47 | struct Llb_Mgr_t_
+#23 2236.4       |
+#23 2236.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/bdd/llb/llb4Image.c:47: note: a different type is defined in another translation unit
+#23 2236.4    47 | struct Llb_Mgr_t_
+#23 2236.4       |
+#23 2236.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/bdd/llb/llb3Image.c:49: note: the first difference of corresponding definitions is field 'pAig'
+#23 2236.4    49 |     Aig_Man_t *   pAig;      // AIG manager
+#23 2236.4       |
+#23 2236.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/bdd/llb/llb4Image.c:49: note: a field with different name is defined in another translation unit
+#23 2236.4    49 |     DdManager *   dd;        // working BDD manager
+#23 2236.4       |
+#23 2239.4 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcOrchestration.c:48: warning: type 'struct Abc_ManRes_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2239.4    48 | struct Abc_ManRes_t_
+#23 2239.4       |
+#23 2239.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcResub.c:36: note: a different type is defined in another translation unit
+#23 2239.5    36 | struct Abc_ManRes_t_
+#23 2239.5       |
+#23 2239.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcOrchestration.c:54: note: the first difference of corresponding definitions is field 'pRoot'
+#23 2239.5    54 |     Abc_Obj_t *        pRoot;      // the root of the cone
+#23 2239.5       |
+#23 2239.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcResub.c:42: note: a field with different name is defined in another translation unit
+#23 2239.5    42 |     int                Log2Probs;
+#23 2239.5       |
+#23 2239.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec16.c:38: warning: type 'struct If_Grp_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2239.8    38 | struct If_Grp_t_
+#23 2239.8       |
+#23 2239.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec66.c:37: note: a different type is defined in another translation unit
+#23 2239.8    37 | struct If_Grp_t_
+#23 2239.8       |
+#23 2239.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec16.c:42: note: the first difference of corresponding definitions is field 'pVars'
+#23 2239.8    42 |     char       pVars[CLU_VAR_MAX];
+#23 2239.8       |
+#23 2239.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec66.c:41: note: a field of same name but different type is defined in another translation unit
+#23 2239.8    41 |     char       pVars[CLU_VAR_MAX];
+#23 2239.8       |
+#23 2239.8 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec16.c:38: note: array types have different bounds
+#23 2239.8    38 | struct If_Grp_t_
+#23 2239.8       |
+#23 2240.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:426: warning: type 'struct Exa_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2240.6   426 | struct Exa_Man_t_
+#23 2240.6       |
+#23 2240.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:517: note: a different type is defined in another translation unit
+#23 2240.6   517 | struct Exa_Man_t_
+#23 2240.6       |
+#23 2240.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:436: note: the first difference of corresponding definitions is field 'VarMarks'
+#23 2240.6   436 |     int               VarMarks[MAJ_NOBJS][2][MAJ_NOBJS]; // variable marks
+#23 2240.6       |
+#23 2240.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:527: note: a field of same name but different type is defined in another translation unit
+#23 2240.6   527 |     int               VarMarks[MAJ_NOBJS][2][MAJ_NOBJS]; // variable marks
+#23 2240.6       |
+#23 2240.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:426: note: array types have different bounds
+#23 2240.6   426 | struct Exa_Man_t_
+#23 2240.6       |
+#23 2240.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:51: warning: type 'struct Maj_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2240.6    51 | struct Maj_Man_t_
+#23 2240.6       |
+#23 2240.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:36: note: a different type is defined in another translation unit
+#23 2240.6    36 | struct Maj_Man_t_
+#23 2240.6       |
+#23 2240.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:60: note: the first difference of corresponding definitions is field 'vInfo'
+#23 2240.6    60 |     Vec_Wrd_t *       vInfo;     // Const0 + Const1 + nVars + nNodes + Maj(nVars)
+#23 2240.6       |
+#23 2240.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:45: note: a field with different name is defined in another translation unit
+#23 2240.6    45 |     int               fUseRand;  // use random topology
+#23 2240.6       |
+#23 2240.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:1154: warning: type 'struct Exa3_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2240.6  1154 | struct Exa3_Man_t_
+#23 2240.6       |
+#23 2240.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:1051: note: a different type is defined in another translation unit
+#23 2240.6  1051 | struct Exa3_Man_t_
+#23 2240.6       |
+#23 2240.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:1166: note: the first difference of corresponding definitions is field 'vUsed2'
+#23 2240.6  1166 |     Vec_Bit_t *       vUsed2;    // bit masks
+#23 2240.6       |
+#23 2240.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:1063: note: a field with different name is defined in another translation unit
+#23 2240.6  1063 |     int               VarMarks[MAJ_NOBJS][6][MAJ_NOBJS]; // variable marks
+#23 2240.6       |
+#23 2240.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/satoko/clause.h:17: warning: type 'struct clause' violates the C++ One Definition Rule [-Wodr]
+#23 2240.7    17 | struct clause {
+#23 2240.7       |
+#23 2240.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/clause.h:22: note: a different type is defined in another translation unit
+#23 2240.7    22 | struct clause {
+#23 2240.7       |
+#23 2240.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/satoko/clause.h:18: note: the first difference of corresponding definitions is field 'f_learnt'
+#23 2240.7    18 |     unsigned f_learnt    : 1;
+#23 2240.7       |
+#23 2240.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat/clause.h:23: note: a field with different name is defined in another translation unit
+#23 2240.7    23 |   unsigned glue : LD_MAX_GLUE;
+#23 2240.7       |
+#23 2240.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcOrchestration.c:48: warning: type 'struct Abc_ManRes_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2240.7    48 | struct Abc_ManRes_t_
+#23 2240.7       |
+#23 2240.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcResub.c:36: note: a different type is defined in another translation unit
+#23 2240.7    36 | struct Abc_ManRes_t_
+#23 2240.7       |
+#23 2240.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcOrchestration.c:54: note: the first difference of corresponding definitions is field 'pRoot'
+#23 2240.7    54 |     Abc_Obj_t *        pRoot;      // the root of the cone
+#23 2240.7       |
+#23 2240.7 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcResub.c:42: note: a field with different name is defined in another translation unit
+#23 2240.7    42 |     int                Log2Probs;
+#23 2240.7       |
+#23 2240.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcBmcS.c:733: warning: type 'struct Par_ThData_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2240.9   733 | typedef struct Par_ThData_t_
+#23 2240.9       |
+#23 2241.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/proof/cec/cecProve.c:96: note: a different type is defined in another translation unit
+#23 2241.0    96 | typedef struct Par_ThData_t_
+#23 2241.0       |
+#23 2241.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcBmcS.c:735: note: the first difference of corresponding definitions is field 'pSat'
+#23 2241.0   735 |     bmc_sat_solver *  pSat;
+#23 2241.0       |
+#23 2241.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/proof/cec/cecProve.c:98: note: a field with different name is defined in another translation unit
+#23 2241.0    98 |     Gia_Man_t * p;
+#23 2241.0       |
+#23 2241.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec16.c:38: warning: type 'struct If_Grp_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2241.1    38 | struct If_Grp_t_
+#23 2241.1       |
+#23 2241.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec66.c:37: note: a different type is defined in another translation unit
+#23 2241.1    37 | struct If_Grp_t_
+#23 2241.1       |
+#23 2241.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec16.c:42: note: the first difference of corresponding definitions is field 'pVars'
+#23 2241.1    42 |     char       pVars[CLU_VAR_MAX];
+#23 2241.1       |
+#23 2241.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec66.c:41: note: a field of same name but different type is defined in another translation unit
+#23 2241.1    41 |     char       pVars[CLU_VAR_MAX];
+#23 2241.1       |
+#23 2241.1 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/if/ifDec16.c:38: note: array types have different bounds
+#23 2241.1    38 | struct If_Grp_t_
+#23 2241.1       |
+#23 2241.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/cov/covInt.h:37: warning: type 'struct Min_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2241.6    37 | struct Min_Man_t_
+#23 2241.6       |
+#23 2241.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaPat2.c:35: note: a different type is defined in another translation unit
+#23 2241.6    35 | struct Min_Man_t_
+#23 2241.6       |
+#23 2241.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/map/cov/covInt.h:39: note: the first difference of corresponding definitions is field 'nVars'
+#23 2241.6    39 |     int               nVars;          // the number of vars
+#23 2241.6       |
+#23 2241.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaPat2.c:37: note: a field with different name is defined in another translation unit
+#23 2241.6    37 |     int              nCis;
+#23 2241.6       |
+#23 2241.9 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:1285: warning: type 'struct StochSynData_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2241.9  1285 | typedef struct StochSynData_t_
+#23 2241.9       |
+#23 2242.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaStoch.c:155: note: a different type is defined in another translation unit
+#23 2242.0   155 | typedef struct StochSynData_t_
+#23 2242.0       |
+#23 2242.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:1287: note: the first difference of corresponding definitions is field 'pIn'
+#23 2242.0  1287 |     Abc_Ntk_t *  pIn;
+#23 2242.0       |
+#23 2242.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaStoch.c:157: note: a field of same name but different type is defined in another translation unit
+#23 2242.0   157 |     Gia_Man_t *  pIn;
+#23 2242.0       |
+#23 2242.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:1285: note: type name 'abc::Abc_Ntk_t_' should match type name 'abc::Gia_Man_t_'
+#23 2242.0  1285 | typedef struct StochSynData_t_
+#23 2242.0       |
+#23 2242.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:41: warning: type 'struct Supp_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2242.0    41 | struct Supp_Man_t_
+#23 2242.0       |
+#23 2242.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaSupps.c:35: note: a different type is defined in another translation unit
+#23 2242.0    35 | struct Supp_Man_t_
+#23 2242.0       |
+#23 2242.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/base/abci/abcPart.c:43: note: the first difference of corresponding definitions is field 'nChunkSize'
+#23 2242.0    43 |     int              nChunkSize;    // the size of one chunk of memory (~1 MB)
+#23 2242.0       |
+#23 2242.0 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/aig/gia/giaSupps.c:38: note: a field with different name is defined in another translation unit
+#23 2242.0    38 |     int         nIters;     // optimization rounds
+#23 2242.0       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose/Glucose.cpp:913: warning: type 'struct reduceDB_lt' violates the C++ One Definition Rule [-Wodr]
+#23 2242.5   913 | struct reduceDB_lt {
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose2/Glucose2.cpp:1073: note: a different type is defined in another translation unit
+#23 2242.5  1073 | struct reduceDB_lt {
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose/Glucose.cpp:914: note: the first difference of corresponding definitions is field 'ca'
+#23 2242.5   914 |     ClauseAllocator& ca;
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose2/Glucose2.cpp:1074: note: a field of same name but different type is defined in another translation unit
+#23 2242.5  1074 |     ClauseAllocator& ca;
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose/SolverTypes.h:217: note: type name 'abc::Gluco::ClauseAllocator' should match type name 'abc::Gluco2::ClauseAllocator'
+#23 2242.5   217 | class ClauseAllocator : public RegionAllocator<uint32_t>
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/glucose2/SolverTypes.h:223: note: the incompatible type is defined here
+#23 2242.5   223 | class ClauseAllocator : public RegionAllocator<uint32_t>
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:426: warning: type 'struct Exa_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2242.5   426 | struct Exa_Man_t_
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:517: note: a different type is defined in another translation unit
+#23 2242.5   517 | struct Exa_Man_t_
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:436: note: the first difference of corresponding definitions is field 'VarMarks'
+#23 2242.5   436 |     int               VarMarks[MAJ_NOBJS][2][MAJ_NOBJS]; // variable marks
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:527: note: a field of same name but different type is defined in another translation unit
+#23 2242.5   527 |     int               VarMarks[MAJ_NOBJS][2][MAJ_NOBJS]; // variable marks
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:426: note: array types have different bounds
+#23 2242.5   426 | struct Exa_Man_t_
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:51: warning: type 'struct Maj_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2242.5    51 | struct Maj_Man_t_
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:36: note: a different type is defined in another translation unit
+#23 2242.5    36 | struct Maj_Man_t_
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:60: note: the first difference of corresponding definitions is field 'vInfo'
+#23 2242.5    60 |     Vec_Wrd_t *       vInfo;     // Const0 + Const1 + nVars + nNodes + Maj(nVars)
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:45: note: a field with different name is defined in another translation unit
+#23 2242.5    45 |     int               fUseRand;  // use random topology
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:1154: warning: type 'struct Exa3_Man_t_' violates the C++ One Definition Rule [-Wodr]
+#23 2242.5  1154 | struct Exa3_Man_t_
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:1051: note: a different type is defined in another translation unit
+#23 2242.5  1051 | struct Exa3_Man_t_
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj.c:1166: note: the first difference of corresponding definitions is field 'vUsed2'
+#23 2242.5  1166 |     Vec_Bit_t *       vUsed2;    // bit masks
+#23 2242.5       |
+#23 2242.5 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/bmc/bmcMaj2.c:1063: note: a field with different name is defined in another translation unit
+#23 2242.5  1063 |     int               VarMarks[MAJ_NOBJS][6][MAJ_NOBJS]; // variable marks
+#23 2242.5       |
+#23 2242.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/satoko/clause.h:17: warning: type 'struct clause' violates the C++ One Definition Rule [-Wodr]
+#23 2242.6    17 | struct clause {
+#23 2242.6       |
+#23 2242.6 /OpenROAD-flow-scripts/tools/OpenROAD/third-party/abc/src/sat/kissat
+#23 2242.6 [output clipped, log limit 2MiB reached]
+#23 DONE 4011.0s
+
+#24 [orfs-builder-base 5/5] RUN find /OpenROAD-flow-scripts/tools ( -name "*LICENSE*" -o -name "*LICENSES*" )     | grep -v '/OpenROAD/src/sta/'     | grep -v '/AutoTuner/'     | grep -v '^/OpenROAD-flow-scripts/tools/install/'     | while IFS= read -r f; do         rel="${f#/OpenROAD-flow-scripts/tools/}";         mkdir -p "/OpenROAD-flow-scripts/tools/install/licenses/$(dirname "$rel")";         cp -r "$f" "/OpenROAD-flow-scripts/tools/install/licenses/$rel";     done
+#24 DONE 1.2s
+
+#25 [stage-2 10/11] COPY --link --from=orfs-builder-base /OpenROAD-flow-scripts/tools/install tools/install
+#25 DONE 0.4s
+
+#26 [stage-2 11/11] COPY --link      --exclude=.git* --exclude=tools/ --exclude=docs/ --exclude=docker/      --exclude=flow/designs --exclude=flow/platforms --exclude=flow/scripts      --exclude=flow/test --exclude=flow/tutorials --exclude=flow/util   . ./
+#26 DONE 0.7s
+
+#27 exporting to image
+#27 exporting layers
+#27 exporting layers 29.2s done
+#27 exporting manifest sha256:a394038aa207e3fae83461eecc91d6a3faabcc0e8ecb900f0edea793cae7f6b7 0.0s done
+#27 exporting config sha256:014cd8672e810522d0aa359f62fc77996899345a1f753adbbb28d1eeaa6b9b99 0.0s done
+#27 exporting attestation manifest sha256:68fb63583a4c544dfeb185627dbf2f92a59e0c1c7858e4218433922ca1e6b9a0
+#27 exporting attestation manifest sha256:68fb63583a4c544dfeb185627dbf2f92a59e0c1c7858e4218433922ca1e6b9a0 0.0s done
+#27 exporting manifest list sha256:124f82127ac06f8b0a651d51aca474d6d2730fc39e6585c653f4e4103900cd90 0.0s done
+#27 naming to docker.io/openroad/flow-ubuntu22.04-builder:9ed603 done
+#27 unpacking to docker.io/openroad/flow-ubuntu22.04-builder:9ed603
+#27 unpacking to docker.io/openroad/flow-ubuntu22.04-builder:9ed603 6.2s done
+#27 DONE 35.7s
+surya_k@LAPTOP-R96FL98F:~/OpenROAD-flow-scripts$

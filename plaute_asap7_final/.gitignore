@@ -1,0 +1,13 @@
+# Large generated ASIC artifacts
+*.log
+*.odb
+*.gds
+*.def
+*.lef
+*.lib
+*.gz
+
+# Temporary tool/build directories
+runs/
+build/
+tmp/
