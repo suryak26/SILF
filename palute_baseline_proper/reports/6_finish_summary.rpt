@@ -1,0 +1,86 @@
+PALUTE BL-00 FINAL POST-ROUTE REPORT SUMMARY
+Source: OpenROAD reports/asap7/palute_lut_gen/base/6_finish.rpt
+
+==========================================================================
+finish report_tns
+==========================================================================
+tns max 0.00
+
+==========================================================================
+finish report_wns
+==========================================================================
+wns max 0.00
+
+==========================================================================
+finish report_worst_slack
+==========================================================================
+worst slack max 4.22
+
+==========================================================================
+finish report_clock_min_period
+==========================================================================
+clk period_min = 0.78 fmax = 1283.71
+
+==========================================================================
+finish report_clock_skew
+==========================================================================
+Clock clk
+   0.10 source latency u1939/CLK ^
+  -0.08 target latency u211/CLK ^
+  -0.00 CRPR
+--------------
+   0.01 setup skew
+
+==========================================================================
+Final violation counts
+==========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+setup violation count 0
+hold violation count 0
+
+==========================================================================
+Representative worst max path
+==========================================================================
+Startpoint: u995 (rising edge-triggered flip-flop clocked by clk)
+Endpoint: u158 (rising edge-triggered flip-flop clocked by clk)
+Path Type: max
+
+Data arrival time: 0.86 ns
+Data required time: 5.08 ns
+Slack: 4.22 ns (MET)
+
+==========================================================================
+Representative minimum path
+==========================================================================
+Data arrival time: 0.12 ns
+Data required time: 0.11 ns
+Slack: 0.01 ns (MET)
+
+==========================================================================
+Power
+==========================================================================
+Sequential:
+  Internal 4.63e-04 W
+  Switching 1.45e-04 W
+  Leakage 2.15e-07 W
+  Total 6.08e-04 W
+
+Combinational:
+  Internal 7.69e-04 W
+  Switching 8.71e-04 W
+  Leakage 5.36e-07 W
+  Total 1.64e-03 W
+
+Clock:
+  Internal 1.55e-04 W
+  Switching 9.96e-05 W
+  Leakage 5.81e-08 W
+  Total 2.55e-04 W
+
+Total:
+  Internal 1.39e-03 W
+  Switching 1.12e-03 W
+  Leakage 8.09e-07 W
+  Total 2.50e-03 W

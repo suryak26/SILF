@@ -1,0 +1,15 @@
+cd ~/OpenROAD-flow-scripts
+
+docker run --rm \
+  --entrypoint /bin/bash \
+  -u "$(id -u):$(id -g)" \
+  -v "$HOME/OpenROAD-flow-scripts/flow:/OpenROAD-flow-scripts/flow" \
+  -v "$HOME:/home/surya_k" \
+  openroad/flow-ubuntu22.04-builder:9ed603 \
+  -lc '
+    set -e
+    cd /OpenROAD-flow-scripts/flow
+    export YOSYS_EXE=/OpenROAD-flow-scripts/tools/install/yosys/bin/yosys
+    export OPENROAD_EXE=/OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad
+    make DESIGN_CONFIG=designs/asap7/palute_lut_gen/config.mk finish
+  '

@@ -1,0 +1,27 @@
+# BL-00 Final Checklist
+
+- [x] Baseline RTL frozen
+- [x] RTL simulation completed
+- [x] 112-entry LUT architecture recorded
+- [x] 3-cycle generation path recorded
+- [x] 200 MHz / 5 ns target recorded
+- [x] ASAP7/RVT/NLDM/TC settings recorded
+- [x] Yosys synthesis completed
+- [x] Floorplan completed
+- [x] Placement completed
+- [x] CTS completed
+- [x] Global routing completed
+- [x] Detailed routing completed
+- [x] RC extraction completed
+- [x] Post-route STA completed
+- [x] Post-route power completed
+- [x] Setup violations = 0
+- [x] Hold violations = 0
+- [x] Slew violations = 0
+- [x] Fanout violations = 0
+- [x] Capacitance violations = 0
+- [x] Final GDS generated
+- [x] Final ODB generated
+- [x] Final SPEF generated
+- [x] Final results documented
+- [x] Paper-scope limitations documented

@@ -1,0 +1,13 @@
+# Final controlled change to upstream ORFS flow/scripts/load.tcl
+#
+# The file was restored from upstream before the final BL-00 run.
+# Only this timing-unit statement was retained.
+
+@@
+   source $::env(SCRIPTS_DIR)/read_liberty.tcl
+
++  # PALUTE timing-unit fix:
++  # PALUTE SDC constraints are specified in ns.
++  set_cmd_units -time ns
++
+   # Read design files
