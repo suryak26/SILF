@@ -1,0 +1,831 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.33 (git sha1 2584903a060)
+
+
+-- Running command `read_verilog -sv ~/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v; hierarchy -top pulse_latch_pipe; proc; opt; check; stat' --
+
+1. Executing Verilog-2005 frontend: /home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v
+Parsing SystemVerilog input from `/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v' to AST representation.
+Generating RTLIL representation for module `\pulse_latch_pipe'.
+Warning: Replacing memory \prod_w2_neg_s2 with list of registers. See /home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:70
+Warning: Replacing memory \prod_w2_pos_s2 with list of registers. See /home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:69
+Warning: Replacing memory \prod_w1_s1 with list of registers. See /home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:51
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \pulse_latch_pipe
+
+2.2. Analyzing design hierarchy..
+Top module:  \pulse_latch_pipe
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50 in module pulse_latch_pipe.
+Marked 2 switch rules as full_case in process $proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25 in module pulse_latch_pipe.
+Marked 1 switch rules as full_case in process $proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14 in module pulse_latch_pipe.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 12 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst_n in `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~4 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+     1/133: $0\lut_out_flat[1007:0] [1007:999]
+     2/133: $0\lut_out_flat[1007:0] [998:990]
+     3/133: $0\lut_out_flat[1007:0] [935:927]
+     4/133: $0\lut_out_flat[1007:0] [989:981]
+     5/133: $0\lut_out_flat[1007:0] [926:918]
+     6/133: $0\lut_out_flat[1007:0] [980:972]
+     7/133: $0\lut_out_flat[1007:0] [917:909]
+     8/133: $0\lut_out_flat[1007:0] [971:963]
+     9/133: $0\lut_out_flat[1007:0] [908:900]
+    10/133: $0\lut_out_flat[1007:0] [962:954]
+    11/133: $0\lut_out_flat[1007:0] [899:891]
+    12/133: $0\lut_out_flat[1007:0] [953:945]
+    13/133: $0\lut_out_flat[1007:0] [944:936]
+    14/133: $0\lut_out_flat[1007:0] [890:882]
+    15/133: $0\lut_out_flat[1007:0] [881:873]
+    16/133: $0\lut_out_flat[1007:0] [872:864]
+    17/133: $0\lut_out_flat[1007:0] [809:801]
+    18/133: $0\lut_out_flat[1007:0] [863:855]
+    19/133: $0\lut_out_flat[1007:0] [800:792]
+    20/133: $0\lut_out_flat[1007:0] [854:846]
+    21/133: $0\lut_out_flat[1007:0] [791:783]
+    22/133: $0\lut_out_flat[1007:0] [845:837]
+    23/133: $0\lut_out_flat[1007:0] [782:774]
+    24/133: $0\lut_out_flat[1007:0] [836:828]
+    25/133: $0\lut_out_flat[1007:0] [773:765]
+    26/133: $0\lut_out_flat[1007:0] [827:819]
+    27/133: $0\lut_out_flat[1007:0] [818:810]
+    28/133: $0\lut_out_flat[1007:0] [764:756]
+    29/133: $0\lut_out_flat[1007:0] [755:747]
+    30/133: $0\lut_out_flat[1007:0] [746:738]
+    31/133: $0\lut_out_flat[1007:0] [683:675]
+    32/133: $0\lut_out_flat[1007:0] [737:729]
+    33/133: $0\lut_out_flat[1007:0] [674:666]
+    34/133: $0\lut_out_flat[1007:0] [728:720]
+    35/133: $0\lut_out_flat[1007:0] [665:657]
+    36/133: $0\lut_out_flat[1007:0] [719:711]
+    37/133: $0\lut_out_flat[1007:0] [656:648]
+    38/133: $0\lut_out_flat[1007:0] [710:702]
+    39/133: $0\lut_out_flat[1007:0] [647:639]
+    40/133: $0\lut_out_flat[1007:0] [701:693]
+    41/133: $0\lut_out_flat[1007:0] [692:684]
+    42/133: $0\lut_out_flat[1007:0] [638:630]
+    43/133: $0\lut_out_flat[1007:0] [629:621]
+    44/133: $0\lut_out_flat[1007:0] [620:612]
+    45/133: $0\lut_out_flat[1007:0] [557:549]
+    46/133: $0\lut_out_flat[1007:0] [611:603]
+    47/133: $0\lut_out_flat[1007:0] [548:540]
+    48/133: $0\lut_out_flat[1007:0] [602:594]
+    49/133: $0\lut_out_flat[1007:0] [539:531]
+    50/133: $0\lut_out_flat[1007:0] [593:585]
+    51/133: $0\lut_out_flat[1007:0] [530:522]
+    52/133: $0\lut_out_flat[1007:0] [584:576]
+    53/133: $0\lut_out_flat[1007:0] [521:513]
+    54/133: $0\lut_out_flat[1007:0] [575:567]
+    55/133: $0\lut_out_flat[1007:0] [566:558]
+    56/133: $0\lut_out_flat[1007:0] [512:504]
+    57/133: $0\lut_out_flat[1007:0] [503:495]
+    58/133: $0\lut_out_flat[1007:0] [494:486]
+    59/133: $0\lut_out_flat[1007:0] [431:423]
+    60/133: $0\lut_out_flat[1007:0] [485:477]
+    61/133: $0\lut_out_flat[1007:0] [422:414]
+    62/133: $0\lut_out_flat[1007:0] [476:468]
+    63/133: $0\lut_out_flat[1007:0] [413:405]
+    64/133: $0\lut_out_flat[1007:0] [467:459]
+    65/133: $0\lut_out_flat[1007:0] [404:396]
+    66/133: $0\lut_out_flat[1007:0] [458:450]
+    67/133: $0\lut_out_flat[1007:0] [395:387]
+    68/133: $0\lut_out_flat[1007:0] [449:441]
+    69/133: $0\lut_out_flat[1007:0] [440:432]
+    70/133: $0\lut_out_flat[1007:0] [386:378]
+    71/133: $0\lut_out_flat[1007:0] [377:369]
+    72/133: $0\lut_out_flat[1007:0] [368:360]
+    73/133: $0\lut_out_flat[1007:0] [305:297]
+    74/133: $0\lut_out_flat[1007:0] [359:351]
+    75/133: $0\lut_out_flat[1007:0] [296:288]
+    76/133: $0\lut_out_flat[1007:0] [350:342]
+    77/133: $0\lut_out_flat[1007:0] [287:279]
+    78/133: $0\lut_out_flat[1007:0] [341:333]
+    79/133: $0\lut_out_flat[1007:0] [278:270]
+    80/133: $0\lut_out_flat[1007:0] [332:324]
+    81/133: $0\lut_out_flat[1007:0] [269:261]
+    82/133: $0\lut_out_flat[1007:0] [323:315]
+    83/133: $0\lut_out_flat[1007:0] [314:306]
+    84/133: $0\lut_out_flat[1007:0] [260:252]
+    85/133: $0\lut_out_flat[1007:0] [251:243]
+    86/133: $0\lut_out_flat[1007:0] [242:234]
+    87/133: $0\lut_out_flat[1007:0] [179:171]
+    88/133: $0\lut_out_flat[1007:0] [233:225]
+    89/133: $0\lut_out_flat[1007:0] [170:162]
+    90/133: $0\lut_out_flat[1007:0] [224:216]
+    91/133: $0\lut_out_flat[1007:0] [161:153]
+    92/133: $0\lut_out_flat[1007:0] [215:207]
+    93/133: $0\lut_out_flat[1007:0] [152:144]
+    94/133: $0\lut_out_flat[1007:0] [206:198]
+    95/133: $0\lut_out_flat[1007:0] [143:135]
+    96/133: $0\lut_out_flat[1007:0] [197:189]
+    97/133: $0\lut_out_flat[1007:0] [188:180]
+    98/133: $0\lut_out_flat[1007:0] [134:126]
+    99/133: $0\lut_out_flat[1007:0] [125:117]
+   100/133: $0\lut_out_flat[1007:0] [116:108]
+   101/133: $0\lut_out_flat[1007:0] [107:99]
+   102/133: $0\lut_out_flat[1007:0] [98:90]
+   103/133: $0\lut_out_flat[1007:0] [89:81]
+   104/133: $0\lut_out_flat[1007:0] [80:72]
+   105/133: $2$fordecl_block$5.i[31:0]$73
+   106/133: $0\lut_out_flat[1007:0] [71:63]
+   107/133: $0\lut_out_flat[1007:0] [62:54]
+   108/133: $0\lut_out_flat[1007:0] [53:45]
+   109/133: $0\lut_out_flat[1007:0] [44:36]
+   110/133: $0\lut_out_flat[1007:0] [35:27]
+   111/133: $0\lut_out_flat[1007:0] [26:18]
+   112/133: $0\lut_out_flat[1007:0] [17:9]
+   113/133: $0\lut_out_flat[1007:0] [8:0]
+   114/133: $2$fordecl_block$7.$for_loop$8[7].$fordecl_block$9.j[31:0]$82
+   115/133: $2$fordecl_block$7.$for_loop$8[6].$fordecl_block$9.j[31:0]$81
+   116/133: $2$fordecl_block$7.$for_loop$8[5].$fordecl_block$9.j[31:0]$80
+   117/133: $2$fordecl_block$7.$for_loop$8[4].$fordecl_block$9.j[31:0]$79
+   118/133: $2$fordecl_block$7.$for_loop$8[3].$fordecl_block$9.j[31:0]$78
+   119/133: $2$fordecl_block$7.$for_loop$8[2].$fordecl_block$9.j[31:0]$77
+   120/133: $2$fordecl_block$7.$for_loop$8[1].$fordecl_block$9.j[31:0]$76
+   121/133: $2$fordecl_block$7.$for_loop$8[0].$fordecl_block$9.j[31:0]$75
+   122/133: $2$fordecl_block$7.i[31:0]$74
+   123/133: $1$fordecl_block$7.$for_loop$8[7].$fordecl_block$9.j[31:0]$71
+   124/133: $1$fordecl_block$7.$for_loop$8[6].$fordecl_block$9.j[31:0]$70
+   125/133: $1$fordecl_block$7.$for_loop$8[5].$fordecl_block$9.j[31:0]$69
+   126/133: $1$fordecl_block$7.$for_loop$8[4].$fordecl_block$9.j[31:0]$68
+   127/133: $1$fordecl_block$7.$for_loop$8[3].$fordecl_block$9.j[31:0]$67
+   128/133: $1$fordecl_block$7.$for_loop$8[2].$fordecl_block$9.j[31:0]$66
+   129/133: $1$fordecl_block$7.$for_loop$8[1].$fordecl_block$9.j[31:0]$65
+   130/133: $1$fordecl_block$7.$for_loop$8[0].$fordecl_block$9.j[31:0]$64
+   131/133: $1$fordecl_block$7.i[31:0]$63
+   132/133: $1$fordecl_block$5.i[31:0]$62
+   133/133: $0\done[0:0]
+Creating decoders for process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25'.
+     1/16: $2$fordecl_block$3.i[31:0]$28
+     2/16: $1$fordecl_block$3.i[31:0]$27
+     3/16: $0\prod_w2_neg_s2[6][7:0]
+     4/16: $0\prod_w2_neg_s2[5][7:0]
+     5/16: $0\prod_w2_neg_s2[4][7:0]
+     6/16: $0\prod_w2_neg_s2[3][7:0]
+     7/16: $0\prod_w2_neg_s2[2][7:0]
+     8/16: $0\prod_w2_neg_s2[1][7:0]
+     9/16: $0\prod_w2_neg_s2[0][7:0]
+    10/16: $0\prod_w2_pos_s2[6][7:0]
+    11/16: $0\prod_w2_pos_s2[5][7:0]
+    12/16: $0\prod_w2_pos_s2[4][7:0]
+    13/16: $0\prod_w2_pos_s2[3][7:0]
+    14/16: $0\prod_w2_pos_s2[2][7:0]
+    15/16: $0\prod_w2_pos_s2[1][7:0]
+    16/16: $0\prod_w2_pos_s2[0][7:0]
+Creating decoders for process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14'.
+     1/12: $1$fordecl_block$1.i[31:0]$16
+     2/12: $0\prod_w1_s1[7][7:0]
+     3/12: $0\prod_w1_s1[6][7:0]
+     4/12: $0\prod_w1_s1[5][7:0]
+     5/12: $0\prod_w1_s1[4][7:0]
+     6/12: $0\prod_w1_s1[3][7:0]
+     7/12: $0\prod_w1_s1[2][7:0]
+     8/12: $0\prod_w1_s1[1][7:0]
+     9/12: $0\prod_w1_s1[0][7:0]
+    10/12: $0\x2_s1[3:0]
+    11/12: $0\x1_s1[3:0]
+    12/12: $0\u_s1[0:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+Latch inferred for signal `\pulse_latch_pipe.$fordecl_block$3.i' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25': $auto$proc_dlatch.cc:427:proc_dlatch$720
+Latch inferred for signal `\pulse_latch_pipe.\prod_w2_pos_s2[0]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25': $auto$proc_dlatch.cc:427:proc_dlatch$725
+Latch inferred for signal `\pulse_latch_pipe.\prod_w2_pos_s2[1]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25': $auto$proc_dlatch.cc:427:proc_dlatch$728
+Latch inferred for signal `\pulse_latch_pipe.\prod_w2_pos_s2[2]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25': $auto$proc_dlatch.cc:427:proc_dlatch$731
+Latch inferred for signal `\pulse_latch_pipe.\prod_w2_pos_s2[3]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25': $auto$proc_dlatch.cc:427:proc_dlatch$734
+Latch inferred for signal `\pulse_latch_pipe.\prod_w2_pos_s2[4]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25': $auto$proc_dlatch.cc:427:proc_dlatch$737
+Latch inferred for signal `\pulse_latch_pipe.\prod_w2_pos_s2[5]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25': $auto$proc_dlatch.cc:427:proc_dlatch$740
+Latch inferred for signal `\pulse_latch_pipe.\prod_w2_pos_s2[6]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25': $auto$proc_dlatch.cc:427:proc_dlatch$743
+Latch inferred for signal `\pulse_latch_pipe.\prod_w2_neg_s2[0]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25': $auto$proc_dlatch.cc:427:proc_dlatch$746
+Latch inferred for signal `\pulse_latch_pipe.\prod_w2_neg_s2[1]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25': $auto$proc_dlatch.cc:427:proc_dlatch$749
+Latch inferred for signal `\pulse_latch_pipe.\prod_w2_neg_s2[2]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25': $auto$proc_dlatch.cc:427:proc_dlatch$752
+Latch inferred for signal `\pulse_latch_pipe.\prod_w2_neg_s2[3]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25': $auto$proc_dlatch.cc:427:proc_dlatch$755
+Latch inferred for signal `\pulse_latch_pipe.\prod_w2_neg_s2[4]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25': $auto$proc_dlatch.cc:427:proc_dlatch$758
+Latch inferred for signal `\pulse_latch_pipe.\prod_w2_neg_s2[5]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25': $auto$proc_dlatch.cc:427:proc_dlatch$761
+Latch inferred for signal `\pulse_latch_pipe.\prod_w2_neg_s2[6]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25': $auto$proc_dlatch.cc:427:proc_dlatch$764
+Latch inferred for signal `\pulse_latch_pipe.\u_s1' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14': $auto$proc_dlatch.cc:427:proc_dlatch$775
+Latch inferred for signal `\pulse_latch_pipe.\x1_s1' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14': $auto$proc_dlatch.cc:427:proc_dlatch$778
+Latch inferred for signal `\pulse_latch_pipe.\x2_s1' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14': $auto$proc_dlatch.cc:427:proc_dlatch$781
+Latch inferred for signal `\pulse_latch_pipe.$fordecl_block$1.i' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14': $auto$proc_dlatch.cc:427:proc_dlatch$784
+Latch inferred for signal `\pulse_latch_pipe.\prod_w1_s1[0]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14': $auto$proc_dlatch.cc:427:proc_dlatch$787
+Latch inferred for signal `\pulse_latch_pipe.\prod_w1_s1[1]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14': $auto$proc_dlatch.cc:427:proc_dlatch$790
+Latch inferred for signal `\pulse_latch_pipe.\prod_w1_s1[2]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14': $auto$proc_dlatch.cc:427:proc_dlatch$793
+Latch inferred for signal `\pulse_latch_pipe.\prod_w1_s1[3]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14': $auto$proc_dlatch.cc:427:proc_dlatch$796
+Latch inferred for signal `\pulse_latch_pipe.\prod_w1_s1[4]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14': $auto$proc_dlatch.cc:427:proc_dlatch$799
+Latch inferred for signal `\pulse_latch_pipe.\prod_w1_s1[5]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14': $auto$proc_dlatch.cc:427:proc_dlatch$802
+Latch inferred for signal `\pulse_latch_pipe.\prod_w1_s1[6]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14': $auto$proc_dlatch.cc:427:proc_dlatch$805
+Latch inferred for signal `\pulse_latch_pipe.\prod_w1_s1[7]' from process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14': $auto$proc_dlatch.cc:427:proc_dlatch$808
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\pulse_latch_pipe.\done' using process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+  created $adff cell `$procdff$809' with positive edge clock and negative level reset.
+Creating register for signal `\pulse_latch_pipe.\lut_out_flat' using process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+  created $adff cell `$procdff$810' with positive edge clock and negative level reset.
+Creating register for signal `\pulse_latch_pipe.$fordecl_block$5.i' using process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+  created $dff cell `$procdff$813' with positive edge clock.
+Creating register for signal `\pulse_latch_pipe.$fordecl_block$7.i' using process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+  created $dff cell `$procdff$816' with positive edge clock.
+Creating register for signal `\pulse_latch_pipe.$fordecl_block$7.$for_loop$8[0].$fordecl_block$9.j' using process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+  created $dff cell `$procdff$819' with positive edge clock.
+Creating register for signal `\pulse_latch_pipe.$fordecl_block$7.$for_loop$8[1].$fordecl_block$9.j' using process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+  created $dff cell `$procdff$822' with positive edge clock.
+Creating register for signal `\pulse_latch_pipe.$fordecl_block$7.$for_loop$8[2].$fordecl_block$9.j' using process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+  created $dff cell `$procdff$825' with positive edge clock.
+Creating register for signal `\pulse_latch_pipe.$fordecl_block$7.$for_loop$8[3].$fordecl_block$9.j' using process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+  created $dff cell `$procdff$828' with positive edge clock.
+Creating register for signal `\pulse_latch_pipe.$fordecl_block$7.$for_loop$8[4].$fordecl_block$9.j' using process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+  created $dff cell `$procdff$831' with positive edge clock.
+Creating register for signal `\pulse_latch_pipe.$fordecl_block$7.$for_loop$8[5].$fordecl_block$9.j' using process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+  created $dff cell `$procdff$834' with positive edge clock.
+Creating register for signal `\pulse_latch_pipe.$fordecl_block$7.$for_loop$8[6].$fordecl_block$9.j' using process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+  created $dff cell `$procdff$837' with positive edge clock.
+Creating register for signal `\pulse_latch_pipe.$fordecl_block$7.$for_loop$8[7].$fordecl_block$9.j' using process `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+  created $dff cell `$procdff$840' with positive edge clock.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+Removing empty process `pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:81$50'.
+Found and cleaned up 2 empty switches in `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25'.
+Removing empty process `pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:65$25'.
+Found and cleaned up 1 empty switch in `\pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14'.
+Removing empty process `pulse_latch_pipe.$proc$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:44$14'.
+Cleaned up 4 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pulse_latch_pipe.
+<suppressed ~203 debug messages>
+
+4. Executing OPT pass (performing simple optimizations).
+
+4.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pulse_latch_pipe.
+<suppressed ~23 debug messages>
+
+4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pulse_latch_pipe'.
+<suppressed ~51 debug messages>
+Removed a total of 17 cells.
+
+4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \pulse_latch_pipe..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~125 debug messages>
+
+4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \pulse_latch_pipe.
+Performed a total of 0 changes.
+
+4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pulse_latch_pipe'.
+Removed a total of 0 cells.
+
+4.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$840 ($dff) from module pulse_latch_pipe (D = 7, Q = $fordecl_block$7.$for_loop$8[7].$fordecl_block$9.j).
+Adding EN signal on $procdff$837 ($dff) from module pulse_latch_pipe (D = 7, Q = $fordecl_block$7.$for_loop$8[6].$fordecl_block$9.j).
+Adding EN signal on $procdff$834 ($dff) from module pulse_latch_pipe (D = 7, Q = $fordecl_block$7.$for_loop$8[5].$fordecl_block$9.j).
+Adding EN signal on $procdff$831 ($dff) from module pulse_latch_pipe (D = 7, Q = $fordecl_block$7.$for_loop$8[4].$fordecl_block$9.j).
+Adding EN signal on $procdff$828 ($dff) from module pulse_latch_pipe (D = 7, Q = $fordecl_block$7.$for_loop$8[3].$fordecl_block$9.j).
+Adding EN signal on $procdff$825 ($dff) from module pulse_latch_pipe (D = 7, Q = $fordecl_block$7.$for_loop$8[2].$fordecl_block$9.j).
+Adding EN signal on $procdff$822 ($dff) from module pulse_latch_pipe (D = 7, Q = $fordecl_block$7.$for_loop$8[1].$fordecl_block$9.j).
+Adding EN signal on $procdff$819 ($dff) from module pulse_latch_pipe (D = 7, Q = $fordecl_block$7.$for_loop$8[0].$fordecl_block$9.j).
+Adding EN signal on $procdff$816 ($dff) from module pulse_latch_pipe (D = 8, Q = $fordecl_block$7.i).
+Adding EN signal on $procdff$813 ($dff) from module pulse_latch_pipe (D = 8, Q = $fordecl_block$5.i).
+Adding EN signal on $procdff$810 ($adff) from module pulse_latch_pipe (D = { $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$194_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$192_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$190_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$188_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$186_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$184_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$182_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$193_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$191_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$189_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$187_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$185_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$183_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$181_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$180_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$178_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$176_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$174_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$172_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$170_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$168_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$179_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$177_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$175_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$173_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$171_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$169_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$167_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$166_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$164_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$162_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$160_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$158_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$156_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$154_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$165_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$163_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$161_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$159_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$157_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$155_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$153_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$152_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$150_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$148_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$146_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$144_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$142_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$140_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$151_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$149_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$147_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$145_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$143_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$141_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$139_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$138_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$136_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$134_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$132_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$130_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$128_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$126_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$137_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$135_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$133_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$131_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$129_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$127_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$125_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$124_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$122_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$120_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$118_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$116_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$114_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$112_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$123_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$121_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$119_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$117_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$115_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$113_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$111_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$110_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$108_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$106_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$104_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$102_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$100_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$98_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$109_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$107_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$105_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$103_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$101_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$99_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:100$97_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$96_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$94_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$92_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$90_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$88_Y $add$/home/rithv/asic/projects/pulse_latch_pipe/rtl/pulse_latch_pipe.v:104$86_Y }, Q = \lut_out_flat [1007:72]).
+Setting constant 1-bit at position 0 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 1-bit at position 1 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 1-bit at position 2 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 3 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 4 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 5 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 6 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 7 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 8 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 9 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 10 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 11 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 12 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 13 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 14 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 15 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 16 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 17 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 18 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 19 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 20 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 21 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 22 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 23 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 24 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 25 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 26 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 27 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 28 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 29 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 30 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 31 on $auto$proc_dlatch.cc:427:proc_dlatch$720 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 0 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 1 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 2 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 1-bit at position 3 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 4 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 5 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 6 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 7 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 8 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 9 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 10 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 11 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 12 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 13 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 14 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 15 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 16 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 17 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 18 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 19 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 20 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 21 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 22 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 23 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 24 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 25 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 26 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 27 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 28 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 29 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 30 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 31 on $auto$proc_dlatch.cc:427:proc_dlatch$784 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 3 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 20 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 21 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 22 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 23 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 24 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 25 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 26 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 27 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 28 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 29 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 30 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 31 on $auto$ff.cc:266:slice$868 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 3 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 20 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 21 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 22 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 23 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 24 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 25 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 26 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 27 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 28 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 29 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 30 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 31 on $auto$ff.cc:266:slice$865 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 0 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 1 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 2 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 20 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 21 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 22 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 23 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 24 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 25 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 26 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 27 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 28 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 29 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 30 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 31 on $auto$ff.cc:266:slice$862 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 0 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 1 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 2 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 20 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 21 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 22 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 23 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 24 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 25 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 26 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 27 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 28 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 29 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 30 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 31 on $auto$ff.cc:266:slice$859 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 0 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 1 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 2 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 20 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 21 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 22 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 23 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 24 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 25 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 26 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 27 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 28 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 29 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 30 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 31 on $auto$ff.cc:266:slice$856 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 0 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 1 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 2 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 20 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 21 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 22 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 23 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 24 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 25 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 26 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 27 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 28 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 29 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 30 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 31 on $auto$ff.cc:266:slice$853 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 0 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 1 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 2 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 20 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 21 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 22 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 23 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 24 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 25 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 26 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 27 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 28 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 29 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 30 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 31 on $auto$ff.cc:266:slice$850 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 0 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 1 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 2 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 20 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 21 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 22 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 23 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 24 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 25 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 26 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 27 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 28 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 29 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 30 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 31 on $auto$ff.cc:266:slice$847 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 0 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 1 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 2 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 20 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 21 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 22 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 23 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 24 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 25 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 26 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 27 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 28 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 29 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 30 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 31 on $auto$ff.cc:266:slice$844 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 0 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 1 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 1-bit at position 2 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 20 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 21 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 22 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 23 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 24 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 25 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 26 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 27 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 28 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 29 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 30 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+Setting constant 0-bit at position 31 on $auto$ff.cc:266:slice$841 ($dffe) from module pulse_latch_pipe.
+
+4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pulse_latch_pipe..
+Removed 143 unused cells and 470 unused wires.
+<suppressed ~145 debug messages>
+
+4.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pulse_latch_pipe.
+
+4.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \pulse_latch_pipe..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~11 debug messages>
+
+4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \pulse_latch_pipe.
+Performed a total of 0 changes.
+
+4.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pulse_latch_pipe'.
+Removed a total of 0 cells.
+
+4.13. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $auto$proc_dlatch.cc:427:proc_dlatch$728 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 0 on $auto$proc_dlatch.cc:427:proc_dlatch$734 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 1 on $auto$proc_dlatch.cc:427:proc_dlatch$734 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 0 on $auto$proc_dlatch.cc:427:proc_dlatch$740 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 0 on $auto$proc_dlatch.cc:427:proc_dlatch$790 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 0 on $auto$proc_dlatch.cc:427:proc_dlatch$796 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 1 on $auto$proc_dlatch.cc:427:proc_dlatch$796 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 0 on $auto$proc_dlatch.cc:427:proc_dlatch$802 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 0 on $auto$proc_dlatch.cc:427:proc_dlatch$808 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 1 on $auto$proc_dlatch.cc:427:proc_dlatch$808 ($dlatch) from module pulse_latch_pipe.
+Setting constant 0-bit at position 2 on $auto$proc_dlatch.cc:427:proc_dlatch$808 ($dlatch) from module pulse_latch_pipe.
+
+4.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pulse_latch_pipe..
+
+4.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pulse_latch_pipe.
+
+4.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+4.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \pulse_latch_pipe..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~11 debug messages>
+
+4.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \pulse_latch_pipe.
+Performed a total of 0 changes.
+
+4.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\pulse_latch_pipe'.
+Removed a total of 0 cells.
+
+4.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+4.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \pulse_latch_pipe..
+
+4.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module pulse_latch_pipe.
+
+4.23. Finished OPT passes. (There is nothing left to do.)
+
+5. Executing CHECK pass (checking for obvious problems).
+Checking module pulse_latch_pipe...
+Found and reported 0 problems.
+
+6. Printing statistics.
+
+=== pulse_latch_pipe ===
+
+   Number of wires:                184
+   Number of wire bits:           3833
+   Number of public wires:          37
+   Number of public wire bits:    1213
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                169
+     $add                          112
+     $adff                           2
+     $adffe                          1
+     $and                            1
+     $dlatch                        24
+     $mul                            8
+     $mux                           11
+     $neg                            7
+     $not                            2
+     $reduce_or                      1
+
+Warnings: 3 unique messages, 3 total
+End of script. Logfile hash: af9e6e9742, CPU: user 0.34s system 0.03s, MEM: 15.04 MB peak
+Yosys 0.33 (git sha1 2584903a060)
+Time spent: 22% 2x read_verilog (0 sec), 21% 5x opt_expr (0 sec), ...

@@ -1,0 +1,22 @@
+# Simulation outputs
+*.vcd
+*.fst
+sim/pulse_latch_tb
+sim/tb_debug
+
+# ORFS generated run data
+orfs/results/
+orfs/logs/
+orfs/reports/
+orfs/objects/
+orfs/flow/
+
+# Local experimental baselines
+baseline_2ns/
+baseline_normalized/
+
+# Editor / OS files
+*.swp
+*.swo
+*~
+.DS_Store
