@@ -1,0 +1,67 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Sun Sep 27 19:00:52 2026
+[*]
+[dumpfile] "/home/rithv/SILF/SB_LUT/sim/waveform.vcd"
+[dumpfile_mtime] "Sun Sep 27 18:56:43 2026"
+[dumpfile_size] 5730
+[savefile] "/home/rithv/SILF/SB_LUT/sim/sb_lut_waveform.gtkw"
+[timestart] 0
+[size] 2560 1469
+[pos] -27 -24
+*-14.008745 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_sb_lut_gen.
+[sst_width] 297
+[signals_width] 142
+[sst_expanded] 1
+[sst_vpaned_height] 459
+@22
+tb_sb_lut_gen.lut_out[511:0]
+@28
+tb_sb_lut_gen.clk
+tb_sb_lut_gen.done
+@22
+tb_sb_lut_gen.lut_out[511:0]
+@28
+tb_sb_lut_gen.lut_valid
+tb_sb_lut_gen.rst_n
+tb_sb_lut_gen.start
+@22
+tb_sb_lut_gen.x1[3:0]
+tb_sb_lut_gen.x2[3:0]
+@420
+tb_sb_lut_gen.dut.CYC1
+tb_sb_lut_gen.dut.CYC2
+tb_sb_lut_gen.dut.DONE
+tb_sb_lut_gen.dut.IDLE
+@28
+tb_sb_lut_gen.dut.clk
+tb_sb_lut_gen.dut.done
+@420
+tb_sb_lut_gen.dut.i
+tb_sb_lut_gen.dut.idx
+tb_sb_lut_gen.dut.j
+@22
+tb_sb_lut_gen.dut.lut_out[511:0]
+@28
+tb_sb_lut_gen.dut.lut_valid
+tb_sb_lut_gen.dut.rst_n
+tb_sb_lut_gen.dut.start
+tb_sb_lut_gen.dut.state[1:0]
+@22
+tb_sb_lut_gen.dut.x1[3:0]
+tb_sb_lut_gen.dut.x2[3:0]
+@420
+tb_sb_lut_gen.run_test.actual
+tb_sb_lut_gen.run_test.entry
+tb_sb_lut_gen.run_test.expected
+tb_sb_lut_gen.run_test.i
+tb_sb_lut_gen.run_test.j
+@28
+tb_sb_lut_gen.run_test.test_passed
+@22
+tb_sb_lut_gen.run_test.test_x1[3:0]
+@23
+tb_sb_lut_gen.run_test.test_x2[3:0]
+[pattern_trace] 1
+[pattern_trace] 0
