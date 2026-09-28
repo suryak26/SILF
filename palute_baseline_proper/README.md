@@ -73,3 +73,14 @@ This folder records the LUT-generator block implementation. The PALUTE paper rep
 - docs/ : baseline methodology, provenance, and recorded parameters
 
 BL-00 is a frozen reference. Future optimization work should use a separate experiment folder or revision rather than editing this baseline.
+## Post-route physical verification
+
+- OpenROAD RCX extraction completed using the ASAP7 extraction model.
+- 64,280 RC segments and 66,390 routed wires were extracted across 8,429 nets.
+- 72,708 resistance segments, 72,708 capacitance entries, and 93,380 coupling-capacitance entries were recorded.
+- Final IEEE 1481-1999 SPEF generated as `6_final.spef`.
+- Final IR-drop visualization generated as `final_ir_drop.webp`.
+- Recorded worst VDD IR drop: 0.784 mV at 0.70 V supply (~0.11%).
+- Electromigration/current-density verification is not claimed because no corresponding EM result was identified in the available run artifacts.
+
+See `docs/POST_ROUTE_PHYSICAL_VERIFICATION.md` and `docs/GENERATED_ARTIFACT_MANIFEST.md` for the evidence record.
