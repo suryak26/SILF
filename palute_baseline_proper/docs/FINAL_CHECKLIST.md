@@ -8,11 +8,13 @@
 - [x] ASAP7/RVT/NLDM/TC settings recorded
 - [x] Yosys synthesis completed
 - [x] Floorplan completed
+- [x] PDN generation completed
 - [x] Placement completed
 - [x] CTS completed
 - [x] Global routing completed
 - [x] Detailed routing completed
 - [x] RC extraction completed
+- [x] Post-route SPEF generated
 - [x] Post-route STA completed
 - [x] Post-route power completed
 - [x] Setup violations = 0
@@ -22,6 +24,7 @@
 - [x] Capacitance violations = 0
 - [x] Final GDS generated
 - [x] Final ODB generated
-- [x] Final SPEF generated
+- [x] Final IR-drop visualization generated
+- [ ] Electromigration analysis established
 - [x] Final results documented
 - [x] Paper-scope limitations documented
