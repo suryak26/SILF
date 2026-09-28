@@ -66,6 +66,52 @@ BL-00 is the frozen reference point for future PALUTE LUT-generator optimization
 | Pad | 0 | 0 | 0 | 0 |
 | **Total** | **1.390 mW** | **1.120 mW** | **0.000809 mW** | **2.50 mW** |
 
+## Post-route parasitic extraction
+
+OpenROAD RCX was run during the final reporting stage using the ASAP7 extraction model. The recorded extraction log reports:
+
+- 64,280 final RC segments
+- 66,390 routed wires extracted
+- 8,429 nets extracted
+- 72,708 resistance segments
+- 72,708 capacitance entries
+- 93,380 coupling-capacitance entries
+- 8,429 nets finished
+
+The final SPEF is:
+
+`flow/results/asap7/palute_lut_gen/base/6_final.spef`
+
+It is an IEEE 1481-1999 SPEF with:
+
+- Time unit: ns
+- Capacitance unit: pF
+- Resistance unit: ohm
+- `*D_NET`, `*CONN`, `*CAP`, and `*RES` sections
+
+The SPEF is a post-route extraction output. It was not a synthesis input. The available run logs prove RC extraction and SPEF generation; they do not establish a separate later `read_spef` invocation.
+
+## Power-integrity verification
+
+A final IR-drop visualization was generated at:
+
+`flow/reports/asap7/palute_lut_gen/base/final_ir_drop.webp`
+
+The recorded power-grid analysis reported:
+
+- Supply: 0.70 V
+- Worst VDD voltage: 0.699 V
+- Average VDD voltage: 0.700 V
+- Average VDD IR drop: 0.235 mV
+- Worst VDD IR drop: 0.784 mV
+- Worst VDD relative drop: approximately 0.11%
+- VSS average IR drop: approximately 0.234 mV
+- VSS relative drop: approximately 0.09%
+
+These IR results are power-grid analysis results and should not be confused with the cell-level total-power breakdown above.
+
+Electromigration analysis is **not claimed as completed** because no EM/current-density result was identified in the available run artifacts.
+
 ## Final artifacts
 
 The completed WSL flow generated:
@@ -79,8 +125,9 @@ The completed WSL flow generated:
 - 6_final_lec.v
 - 6_1_merged.gds
 - 6_1_fill.odb
+- final_ir_drop.webp
 
-These large generated artifacts are documented here but are not duplicated in this lightweight source repository snapshot.
+These large generated artifacts are documented here. The lightweight GitHub baseline snapshot records source, reports, constraints, and verification metadata rather than duplicating the complete generated database set.
 
 ## Scope
 
