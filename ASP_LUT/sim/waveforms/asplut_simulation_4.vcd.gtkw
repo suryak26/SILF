@@ -1,0 +1,66 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Mon Sep 28 12:40:58 2026
+[*]
+[dumpfile] "/home/rithv/SILF/asplut_recreate_asap7/sim/waveforms/asplut_simulation.vcd"
+[dumpfile_mtime] "Mon Sep 28 12:20:06 2026"
+[dumpfile_size] 350559
+[savefile] "/home/rithv/SILF/asplut_recreate_asap7/sim/waveforms/asplut_simulation_4.vcd.gtkw"
+[timestart] 0
+[size] 2560 1469
+[pos] -27 -24
+*-17.867374 151000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_asplut.
+[treeopen] tb_asplut.dut.
+[sst_width] 297
+[signals_width] 190
+[sst_expanded] 1
+[sst_vpaned_height] 459
+@421
+tb_asplut.dut.COMPUTE
+@420
+tb_asplut.dut.DONE_STATE
+tb_asplut.dut.IDLE
+tb_asplut.dut.LUT_DEPTH
+tb_asplut.dut.P_W
+tb_asplut.dut.P_X
+tb_asplut.dut.P_Y
+tb_asplut.dut.W1_MAG_NUM
+tb_asplut.dut.W2_MAG_NUM
+@28
+tb_asplut.dut.clk
+@22
+tb_asplut.dut.cycle_cnt[6:0]
+@28
+tb_asplut.dut.done
+tb_asplut.dut.is_neg
+@22
+tb_asplut.dut.lut_out_flat[1007:0]
+@28
+tb_asplut.dut.next_state[1:0]
+@22
+tb_asplut.dut.prod_w1[8:0]
+tb_asplut.dut.prod_w2[8:0]
+@28
+tb_asplut.dut.rst_n
+tb_asplut.dut.running
+tb_asplut.dut.start
+tb_asplut.dut.state[1:0]
+@22
+tb_asplut.dut.sum_val[8:0]
+@28
+tb_asplut.dut.u
+@22
+tb_asplut.dut.w1[3:0]
+tb_asplut.dut.w1_ext[8:0]
+tb_asplut.dut.w2_ext[8:0]
+tb_asplut.dut.w2_ext_neg[8:0]
+tb_asplut.dut.w2_ext_pos[8:0]
+tb_asplut.dut.w2_idx[3:0]
+tb_asplut.dut.w2_mag[3:0]
+tb_asplut.dut.x1[3:0]
+tb_asplut.dut.x1_ext[8:0]
+tb_asplut.dut.x2[3:0]
+tb_asplut.dut.x2_ext[8:0]
+[pattern_trace] 1
+[pattern_trace] 0

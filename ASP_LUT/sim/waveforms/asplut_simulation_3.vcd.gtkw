@@ -1,0 +1,36 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Mon Sep 28 12:40:11 2026
+[*]
+[dumpfile] "/home/rithv/SILF/asplut_recreate_asap7/sim/waveforms/asplut_simulation.vcd"
+[dumpfile_mtime] "Mon Sep 28 12:20:06 2026"
+[dumpfile_size] 350559
+[savefile] "/home/rithv/SILF/asplut_recreate_asap7/sim/waveforms/asplut_simulation_3.vcd.gtkw"
+[timestart] 0
+[size] 2560 1469
+[pos] -27 -24
+*-17.867374 178000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_asplut.
+[treeopen] tb_asplut.dut.
+[sst_width] 297
+[signals_width] 190
+[sst_expanded] 1
+[sst_vpaned_height] 459
+@29
+tb_asplut.clk
+@28
+tb_asplut.done
+@420
+tb_asplut.errors
+tb_asplut.i
+@22
+tb_asplut.lut_out_flat[1007:0]
+@28
+tb_asplut.rst_n
+tb_asplut.start
+tb_asplut.u
+@22
+tb_asplut.x1[3:0]
+tb_asplut.x2[3:0]
+[pattern_trace] 1
+[pattern_trace] 0
