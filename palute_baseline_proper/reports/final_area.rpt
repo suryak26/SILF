@@ -1,0 +1,22 @@
+PALUTE BL-00 FINAL POST-ROUTE AREA REPORT
+Source: OpenROAD final 6_finish stage for lut_gen_unit
+
+==========================================================================
+Final physical implementation area
+==========================================================================
+Design area: 1147 um^2
+Utilization: 53%
+
+The final routed design is represented by:
+  6_final.odb
+  6_final.def
+  6_final.gds
+
+Related final timing:
+  Clock target: 5.000 ns (200 MHz)
+  Worst slack: 4.2210 ns
+  Minimum period: 0.78 ns
+  Fmax: 1283.71 MHz
+
+Note: 1147 um^2 is the final physical implementation design area, not the
+initial mapped-cell area (953.622 um^2) or final synthesis area (1086 um^2).
