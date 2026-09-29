@@ -1,0 +1,15 @@
+[INFO RSZ-0038] Inserted 444 buffers in 483 nets.
+[INFO RSZ-0504] Runtime: 1.62s
+Report metrics stage 1, synth...
+
+==========================================================================
+synth report_design_area
+--------------------------------------------------------------------------
+Design area 1086 um^2 100% utilization.
+write_db ./results/asap7/palute_lut_gen/base/1_synth.odb
+write_sdc -no_timestamp ./results/asap7/palute_lut_gen/base/1_synth.sdc
+Elapsed time: 0:07.42[h:]min:sec. CPU time: user 7.95 sys 1.49 (127%). Peak memory: 243720KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+1_synth                   .v              7            238 13f4e65b2bd1045326f8
+1_synth                   .odb                             9f066adb68c2b2239fef
+1_synth                   .sdc                             15ef33903bed2475d877
