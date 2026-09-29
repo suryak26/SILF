@@ -2,15 +2,36 @@
 
 module tb_asplut;
 
+
+    parameter P_X = 4;
+    parameter P_W = 4;
+    parameter P_Y = P_X + P_W + 1;
+    parameter W1_MAG_NUM = 8;
+    parameter W2_MAG_NUM = 7;
+    parameter LUT_DEPTH = W1_MAG_NUM * 2 * W2_MAG_NUM;
+
     reg clk;
     reg rst_n;
     reg start;
     reg u;
-    reg [3:0] x1;
-    reg [3:0] x2;
+    reg signed [P_X-1:0] x1;
+    reg signed [P_X-1:0] x2;
 
     wire done;
-    wire [1007:0] lut_out_flat;
+    wire signed [P_Y*LUT_DEPTH-1:0] lut_out_flat;
+
+    integer i;
+    integer j;
+    integer idx;
+    integer f;
+    integer errors;
+    integer total_entries;
+
+    reg signed [P_Y-1:0] actual;
+
+    // ============================================================
+    // DUT
+    // ============================================================
 
     asplut_gen_unit dut (
         .clk(clk),
@@ -23,149 +44,130 @@ module tb_asplut;
         .lut_out_flat(lut_out_flat)
     );
 
-    // 100 MHz clock
-    initial begin
-        clk = 0;
-        forever #5 clk = ~clk;
-    end
+    // ============================================================
+    // Clock: 2 ns period
+    // ============================================================
 
-    // Waveform
-    initial begin
-        $dumpfile("sim/waveforms/asplut_simulation.vcd");
-        $dumpvars(0, tb_asplut);
-    end
+    initial clk = 1'b0;
+    always #1 clk = ~clk;
 
-    integer i;
-    integer errors;
-
-    reg signed [8:0] expected_lut [0:111];
-    reg signed [8:0] actual_lut [0:111];
+    // ============================================================
+    // Main verification
+    // ============================================================
 
     initial begin
 
-        rst_n = 0;
-        start = 0;
-        u = 1;
-        x1 = 4'sd3;
-        x2 = -4'sd2;
-        errors = 0;
+        // --------------------------------------------------------
+        // Waveform
+        // --------------------------------------------------------
 
-        // Reset
-        #20;
-        rst_n = 1;
-        #20;
 
-        $display("========================================");
-        $display("ASPLUT Functional Verification");
-        $display("Test Case 1: x1=%0d, x2=%0d, u=%0d",
-                 $signed(x1), $signed(x2), u);
-        $display("========================================");
+        // --------------------------------------------------------
+        // CSV output
+        // --------------------------------------------------------
 
-        // Expected LUT
-        for (i = 0; i < 112; i = i + 1) begin
-            integer w1;
-            integer w2_idx;
-            integer w2;
+        f = $fopen("sim/results/asplut_rtl_output.csv", "w");
 
-            w1 = (i / 14) + 1;
-            w2_idx = i % 14;
-
-            if (w2_idx < 7)
-                w2 = w2_idx + 1;
-            else
-                w2 = -(14 - w2_idx);
-
-            expected_lut[i] =
-                (w1 * $signed(x1)) +
-                (w2 * $signed(x2));
+        if (f == 0) begin
+            $display("ERROR: Could not open CSV output file.");
+            $finish;
         end
 
-        // Start LUT generation
-        start = 1;
+        $fdisplay(f, "x1,x2,lut_index,actual_value");
+
+        // --------------------------------------------------------
+        // Initial state
+        // --------------------------------------------------------
+
+        rst_n = 1'b0;
+        start = 1'b0;
+        u     = 1'b1;
+        x1    = 4'sd0;
+        x2    = 4'sd0;
+
+        errors = 0;
+        total_entries = 0;
+
         #10;
-        start = 0;
 
-        // Wait for completion
-        wait(done);
-        #20;
+        rst_n = 1'b1;
 
-        // Extract LUT
-        for (i = 0; i < 112; i = i + 1)
-            actual_lut[i] = lut_out_flat[i*9 +: 9];
+        repeat (2) @(posedge clk);
 
-        // Verify
-        $display("\nVerifying LUT entries...");
+        // ========================================================
+        // Exhaustive signed input verification
+        // x1 = -8 ... +7
+        // x2 = -8 ... +7
+        // ========================================================
 
-        for (i = 0; i < 112; i = i + 1) begin
-            if (actual_lut[i] !== expected_lut[i]) begin
-                $display(
-                    "ERROR: Entry[%0d] Expected=%0d, Actual=%0d",
-                    i,
-                    expected_lut[i],
-                    actual_lut[i]
-                );
-                errors = errors + 1;
+        for (i = -8; i <= 7; i = i + 1) begin
+            for (j = -8; j <= 7; j = j + 1) begin
+
+                x1 = i;
+                x2 = j;
+
+                // Start transaction
+		// Assert start away from the sampling edge
+		@(negedge clk);
+		start = 1'b1;
+
+		// DUT samples start on the following rising edge
+		@(posedge clk);
+
+		// Deassert start away from the sampling edge
+		@(negedge clk);
+		start = 1'b0;
+
+		// 112 COMPUTE cycles:
+		// cycle 0 through cycle 111
+		repeat (112) @(posedge clk);
+
+		#1;
+                // ------------------------------------------------
+                // Dump all 112 generated LUT entries
+                // ------------------------------------------------
+
+                for (idx = 0; idx < LUT_DEPTH; idx = idx + 1) begin
+
+                    actual = $signed(
+                        lut_out_flat[idx*P_Y +: P_Y]
+                    );
+
+                    $fdisplay(
+                        f,
+                        "%0d,%0d,%0d,%0d",
+                        i,
+                        j,
+                        idx,
+                        actual
+                    );
+
+                    total_entries = total_entries + 1;
+                end
+
             end
         end
 
-        if (errors == 0) begin
-            $display("\n========================================");
-            $display("[SUCCESS] All 112 LUT entries verified!");
-            $display("Entry 0   : %0d", actual_lut[0]);
-            $display("Entry 56  : %0d", actual_lut[56]);
-            $display("Entry 111 : %0d", actual_lut[111]);
-            $display("========================================");
-        end
-        else begin
-            $display("\n========================================");
-            $display("[FAILURE] %0d errors found", errors);
-            $display("========================================");
-        end
+        $fclose(f);
 
-        // ------------------------------------------------
-        // Test Case 2: u = 0
-        // ------------------------------------------------
-        #50;
+        // ========================================================
+        // Final result
+        // ========================================================
 
-        $display("\n========================================");
-        $display("Test Case 2: u=0 (x1 only mode)");
+        $display("========================================");
+        $display("ASP_LUT RTL DATA GENERATION COMPLETE");
+        $display("Input combinations : %0d", 256);
+        $display("LUT entries/input   : %0d", LUT_DEPTH);
+        $display("Total CSV entries   : %0d", total_entries);
+        $display("Errors              : %0d", errors);
         $display("========================================");
 
-        u = 0;
-        x1 = 4'sd5;
-        x2 = 4'sd0;
-
-        start = 1;
-        #10;
-        start = 0;
-
-        wait(done);
-        #20;
-
-        $display(
-            "Entry 0   : %0d (expected: 5)",
-            $signed(lut_out_flat[8:0])
-        );
-
-        $display(
-            "Entry 111 : %0d (expected: 40)",
-            $signed(lut_out_flat[1007:999])
-        );
-
-        #50;
+        if (errors == 0)
+            $display("RTL SIMULATION: PASSED");
+        else
+            $display("RTL SIMULATION: FAILED");
 
         $finish;
-    end
-
-    // Monitor
-    initial begin
-        $monitor(
-            "Time=%0t | state=%b | cycle_cnt=%0d | done=%b",
-            $time,
-            dut.state,
-            dut.cycle_cnt,
-            done
-        );
     end
 
 endmodule

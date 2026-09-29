@@ -1,0 +1,17 @@
+ASP_LUT PYTHON GOLDEN-MODEL VERIFICATION
+========================================
+
+RTL output records compared : 28672
+Expected records             : 28672
+Mismatches                   : 0
+
+Result:
+RTL MATCHES GOLDEN MODEL EXACTLY [PASS]
+
+Coverage:
+256 signed (x1, x2) input combinations
+112 LUT entries per input combination
+256 × 112 = 28672 comparisons
+
+Reference:
+Independent Python mathematical golden model.
