@@ -1,0 +1,11 @@
+{
+  "description": "example nonlin",
+  "tensors": [
+    {"name": "Out",   "shape": [1024, 1024], "bits": 4},
+    {"name": "S",   "shape": [1024, 1024], "bits": 4}
+  ],
+
+  "ops": [
+    {"type": "Gelu", "A": "Out", "C": "S"}
+  ]
+}

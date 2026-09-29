@@ -1,0 +1,19 @@
+PALUTE BASELINE PYTHON GOLDEN-MODEL VERIFICATION
+===============================================
+
+RTL output records compared : 57344
+Expected records             : 57344
+Mismatches                   : 0
+
+Result:
+RTL MATCHES GOLDEN MODEL EXACTLY [PASS]
+
+Coverage:
+2 u modes
+256 signed (x1, x2) input combinations per mode
+112 LUT entries per input combination
+2 × 256 × 112 = 57344 comparisons
+
+Reference:
+Independent Python mathematical golden model derived directly
+from the PALUTE baseline RTL behavior.

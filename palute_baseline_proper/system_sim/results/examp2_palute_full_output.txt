@@ -1,0 +1,17 @@
+Simulator initialized
+Load test/Op/examp2.json, including 2 tensors and 1 ops
+--- 🚀 Simulation begins ---
+  [No. 0] Type: Gelu         | Energy:      2918344.29 pJ | Latency:          644.69 ns
+--- 🏁 Simulation completed ---
+Energy: 0.00 mJ
+Latency: 0.0006 ms
+Power: 4.53 W
+--- 📊 Energy / Latency breakdown ---
+Component          |     Energy (pJ) |    Latency (ns) |      E % |      L %
+----------------------------------------------------------------------------
+LUT generation     |            0.00 |            0.00 |    0.00% |    0.00%
+Match & query      |      1118987.88 |          224.00 |   38.34% |   34.75%
+Memory read/write  |      1799356.42 |          420.69 |   61.66% |   65.25%
+Accumulate         |            0.00 |            0.00 |    0.00% |    0.00%
+----------------------------------------------------------------------------
+Breakdown sum      |      2918344.29 |          644.69 |  100.00% |  100.00%

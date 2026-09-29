@@ -1,0 +1,20 @@
+ASPLUT SYSTEM-LEVEL SIMULATION
+==============================
+
+Workload: examp2.json
+Source: PALUTE_sim/test/Op/examp2.json
+
+ASPLUT-specific parameters:
+LUT depth: 112
+LUT generation cycles: 112
+T_clk: 2.0 ns
+
+Total energy: 2918344.29 pJ
+Total latency: 644.69 ns
+Derived power: 4.53 W
+
+Breakdown:
+LUT generation: 0.00 pJ, 0.00 ns
+Match & query: 1118987.88 pJ, 224.00 ns
+Memory read/write: 1799356.42 pJ, 420.69 ns
+Accumulate: 0.00 pJ, 0.00 ns

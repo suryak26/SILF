@@ -1,0 +1,24 @@
+{
+  "description": "example gemm",
+  "tensors": [
+    {"name": "X",   "shape": [512, 2048], "bits": 4},
+    {"name": "W_q",  "shape": [2048, 2048], "bits": 4},
+    {"name": "Q", "shape": [512, 2048], "bits": 4},
+    {"name": "W_q_h1",  "shape": [2048, 1024], "bits": 4},
+    {"name": "W_q_h2",  "shape": [2048, 1024], "bits": 4},
+    {"name": "Q_h1", "shape": [512, 2048], "bits": 4},
+    {"name": "Q_h2", "shape": [512, 2048], "bits": 4},
+    {"name": "Q_h3", "shape": [512, 2048], "bits": 4}
+
+  ],
+
+  "ops": [
+
+    {"type": "MatMul", "A": "X", "B": "W_q", "C": "Q"},
+
+    {"type": "ParallelOps", "branches": [
+      {"type": "MatMul", "A": "X",  "B": "W_q_h1",  "C": "Q_h1"},
+      {"type": "MatMul", "A": "X",  "B": "W_q_h2",  "C": "Q_h2"}
+    ]}
+  ]
+}
