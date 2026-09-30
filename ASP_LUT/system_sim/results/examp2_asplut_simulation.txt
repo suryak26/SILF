@@ -8,6 +8,9 @@ ASPLUT-specific parameters:
 LUT depth: 112
 LUT generation cycles: 112
 T_clk: 2.0 ns
+Amortization generation time: 560.0 ns
+Amortization query count: 104
+Activation time per query: 14.16 ns
 
 Total energy: 2918344.29 pJ
 Total latency: 644.69 ns

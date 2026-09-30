@@ -8,13 +8,16 @@ PALUTE-specific parameters:
 LUT depth: 112
 LUT generation cycles: 3
 T_clk: 2.0 ns
+Amortization generation time: 15.0 ns
+Amortization query count: 104
+Activation time per query: 14.16 ns
 
 Total energy: 697456957.85 pJ
-Total latency: 371747.86 ns
-Derived power: 1.88 W
+Total latency: 365603.86 ns
+Derived power: 1.91 W
 
 Breakdown:
-LUT generation: 71345111.04 pJ, 6144.00 ns
+LUT generation: 71345111.04 pJ, 0.00 ns
 Match & query: 279746.97 pJ, 344064.00 ns
 Memory read/write: 310388981.76 pJ, 19395.86 ns
 Accumulate: 315443118.08 pJ, 2144.00 ns
