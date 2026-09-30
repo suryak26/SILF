@@ -1,0 +1,28 @@
+digraph "ASPLUT proposed critical path" {
+rankdir=LR; bgcolor="white";
+node [shape=box, style="rounded,filled", fillcolor="white", color="navy", fontname="Helvetica", fontsize=9];
+edge [color="navy", arrowsize=0.7];
+n0 [label="x2[1]\nINPUT", shape=hexagon];
+n1 [label="u1146\nAND3x1_ASAP7_75t_R"]; n0 -> n1;
+n2 [label="u1148\nNOR2x1_ASAP7_75t_R"]; n1 -> n2;
+n3 [label="u1149\nAO21x1_ASAP7_75t_R"]; n2 -> n3;
+n4 [label="u1154\nNAND2x1_ASAP7_75t_R"]; n3 -> n4;
+n5 [label="u1155\nOAI21x1_ASAP7_75t_R"]; n4 -> n5;
+n6 [label="u1156\nXNOR2x2_ASAP7_75t_R"]; n5 -> n6;
+n7 [label="u1159\nXOR2x2_ASAP7_75t_R"]; n6 -> n7;
+n8 [label="u1160\nNAND2x1_ASAP7_75t_R"]; n7 -> n8;
+n9 [label="u1211\nMAJx2_ASAP7_75t_R"]; n8 -> n9;
+n10 [label="u1225\nMAJx2_ASAP7_75t_R"]; n9 -> n10;
+n11 [label="u1227\nNAND2x2_ASAP7_75t_R"]; n10 -> n11;
+n12 [label="u1228\nAND2x4_ASAP7_75t_R"]; n11 -> n12;
+n13 [label="gain42\nBUFx24_ASAP7_75t_R"]; n12 -> n13;
+n14 [label="u1229\nXOR2x2_ASAP7_75t_R"]; n13 -> n14;
+n15 [label="u1232\nAND2x2_ASAP7_75t_R"]; n14 -> n15;
+n16 [label="gain16\nBUFx6f_ASAP7_75t_R"]; n15 -> n16;
+n17 [label="u1233\nOR3x1_ASAP7_75t_R"]; n16 -> n17;
+n18 [label="gain4\nBUFx6f_ASAP7_75t_R"]; n17 -> n18;
+n19 [label="u1234\nAND2x2_ASAP7_75t_R"]; n18 -> n19;
+n20 [label="gain1\nBUFx6f_ASAP7_75t_R"]; n19 -> n20;
+n21 [label="u2081\nAO32x1_ASAP7_75t_R"]; n20 -> n21;
+n22 [label="u287\nDFFHQNx1_ASAP7_75t_R"]; n21 -> n22;
+}
