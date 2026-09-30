@@ -1,0 +1,15 @@
+digraph "PALUTE baseline critical path" {
+rankdir=LR; bgcolor="white";
+node [shape=box, style="rounded,filled", fillcolor="white", color="navy", fontname="Helvetica", fontsize=10];
+edge [color="navy", arrowsize=0.7];
+n0 [label="state_reg[0]/QN\nDFFASRHQNx1_ASAP7_75t_L", shape=hexagon];
+n1 [label="g83624\nINVx1_ASAP7_75t_L"]; n0 -> n1;
+n2 [label="g83427\nNOR2xp33_ASAP7_75t_L"]; n1 -> n2;
+n3 [label="g83302\nINVx1_ASAP7_75t_L"]; n2 -> n3;
+n4 [label="g83239\nNAND2xp5_ASAP7_75t_L"]; n3 -> n4;
+n5 [label="g83010\nOR2x2_ASAP7_75t_L"]; n4 -> n5;
+n6 [label="g82967\nINVx1_ASAP7_75t_L"]; n5 -> n6;
+n7 [label="g82925\nINVx5_ASAP7_75t_L"]; n6 -> n7;
+n8 [label="g81719\nAOI222xp33_ASAP7_75t_L"]; n7 -> n8;
+n9 [label="lut_out_flat_reg[966]\nDFFASRHQNx1_ASAP7_75t_L"]; n8 -> n9;
+}
