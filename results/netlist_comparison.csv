@@ -1,0 +1,8 @@
+Metric,PALUTE baseline synthesis,ASPLUT proposed synthesis,Change (%)
+I/O count,1081,1021,-5.55
+Nets,8151,4456,-45.33
+Instances,8079,4436,-45.09
+Standard-cell area (um^2),1312.170,677.081,-48.40
+Total synthesis power (W),1.113360,0.0010496,-99.91
+Minimum period (ns),0.38060,0.39375,3.46
+Fmax (GHz),2.62746,2.53966,-3.34
