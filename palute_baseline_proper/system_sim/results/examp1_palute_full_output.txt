@@ -1,18 +1,18 @@
 Simulator initialized
 Load test/Op/examp1.json, including 8 tensors and 2 ops
 --- 🚀 Simulation begins ---
-  [No. 0] Type: MatMul       | Energy:    285106130.12 pJ | Latency:       243217.93 ns
-  [No. 1] Type: ParallelOps  | Energy:    412350827.72 pJ | Latency:       128529.93 ns
+  [No. 0] Type: MatMul       | Energy:    285106130.12 pJ | Latency:       240145.93 ns
+  [No. 1] Type: ParallelOps  | Energy:    412350827.72 pJ | Latency:       125457.93 ns
 --- 🏁 Simulation completed ---
 Energy: 0.70 mJ
-Latency: 0.3717 ms
-Power: 1.88 W
+Latency: 0.3656 ms
+Power: 1.91 W
 --- 📊 Energy / Latency breakdown ---
 Component          |     Energy (pJ) |    Latency (ns) |      E % |      L %
 ----------------------------------------------------------------------------
-LUT generation     |     71345111.04 |         6144.00 |   10.23% |    1.65%
-Match & query      |       279746.97 |       344064.00 |    0.04% |   92.55%
-Memory read/write  |    310388981.76 |        19395.86 |   44.50% |    5.22%
-Accumulate         |    315443118.08 |         2144.00 |   45.23% |    0.58%
+LUT generation     |     71345111.04 |            0.00 |   10.23% |    0.00%
+Match & query      |       279746.97 |       344064.00 |    0.04% |   94.11%
+Memory read/write  |    310388981.76 |        19395.86 |   44.50% |    5.31%
+Accumulate         |    315443118.08 |         2144.00 |   45.23% |    0.59%
 ----------------------------------------------------------------------------
-Breakdown sum      |    697456957.85 |       371747.86 |  100.00% |  100.00%
+Breakdown sum      |    697456957.85 |       365603.86 |  100.00% |  100.00%

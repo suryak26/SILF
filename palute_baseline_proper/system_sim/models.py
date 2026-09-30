@@ -264,14 +264,25 @@ def matmul_query_cost(op, tensors, params, return_breakdown=False):
 
         # 1. LUT generation and DRAM read/write
         e_lut_gen, e_dram, t_lut_gen, t_dram = LUT_gen_cost(op, tensors, params, return_breakdown=True)
-        add_breakdown_cost(breakdown, 'lut_generation', e_lut_gen, t_lut_gen)
-        add_breakdown_cost(breakdown, 'dram_rw', e_dram, t_dram)
 
         # 2. Compare & match
         e_sweep, t_sweep = Compare_cost(op, tensors, params)
         e_rw, t_data, t_trans = MATCH_LUT(op, tensors, params, return_breakdown=True)
+
+        # Report-level controller amortization:
+        # Generation occurs once per token/layer and is overlapped against
+        # the activation-query window specified in Section 11.5.
+        amort_window = (
+            params['AMORT_QUERY_COUNT'] * params['AMORT_T_ACT_NS']
+        )
+        visible_gen_latency = max(
+            0.0,
+            params['AMORT_GEN_NS'] - amort_window
+        )
+
+        add_breakdown_cost(breakdown, 'lut_generation', e_lut_gen, visible_gen_latency)
         add_breakdown_cost(breakdown, 'match_query', e_sweep, t_sweep)
-        add_breakdown_cost(breakdown, 'dram_rw', e_rw, t_trans+t_data)
+        add_breakdown_cost(breakdown, 'dram_rw', e_dram + e_rw, t_dram + t_trans + t_data)
 
         # 3. Accumulation
         e_acc, t_acc = Accumulation_cost(op, tensors, params)

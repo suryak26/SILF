@@ -8,6 +8,9 @@ def get_model_params():
         "pw": 4,
         "LUT_DEPTH": 112,
         "LUT_GEN_CYCLES": 112,
+        "AMORT_T_ACT_NS": 14.16,
+        "AMORT_GEN_NS": 560.0,
+        "AMORT_QUERY_COUNT": 104,
 
         # -----------------------------
         # DRAM
